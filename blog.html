@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Flames of Fire Church</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+            color: #111;
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .ember {
+            color: #E25822;
+        }
+        .ember-subtle {
+            color: #c45124;
+        }
+        .ember-bg {
+            background-color: #E25822;
+        }
+        .ember-bg-subtle {
+            background-color: #c45124;
+        }
+        .ember-border {
+            border-color: #E25822;
+        }
+        
+        .article-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, #333, #111);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(45deg, #333, #111);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Testimonial Carousel Styles */
+        .testimonial-carousel {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .testimonial-slide.active {
+            display: block;
+            opacity: 1;
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+        
+        .carousel-nav:hover {
+            background: rgba(0,0,0,0.8);
+        }
+        
+        .carousel-prev {
+            left: 20px;
+        }
+        
+        .carousel-next {
+            right: 20px;
+        }
+        
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .carousel-dot.active {
+            background: #E25822;
+        }
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        
+        @media (max-width: 768px) {
+            .hero-image {
+                height: 250px;
+            }
+            .article-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black text-white z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 hover:text-gray-300 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span class="text-sm">Back</span>
+            </a>
+            <a class="navbar-brand" href="index.html">
+             <img src="Fof/logo.png" width="10%" height="10%" class="center" alt="Logo"></a>
+            <div class="w-16"></div> <!-- Spacer for centering -->
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="h-screen flex items-center justify-center bg-black text-white relative">
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-light mb-6">BLOG</h1>
+            <p class="text-xl md:text-2xl font-light max-w-2xl mx-auto mb-10">Inspiring words, biblical insights, and updates from our church community</p>
+            <div class="ember-bg-subtle h-1 w-24 mx-auto"></div>
+        </div>
+    </header>
+
+    <!-- Articles Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto space-y-16">
+                
+                <!-- Article 1 -->
+                <article class="article-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="article-image" style="position: relative;">
+                        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: rgba(255,255,255,0.7); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; text-align: center;">
+                            Article Image<br>
+                            <span style="font-size: 1rem; text-transform: none; display: block; margin-top: 10px;">800 x 250px</span>
+                        </span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="ember-bg text-white px-3 py-1 rounded-full text-sm mr-4">Sermon</span>
+                            <span class="text-gray-500 text-sm">December 15, 2023</span>
+                        </div>
+                        <h2 class="text-3xl font-light mb-6 ember">Walking in God's Purpose: Discovering Your Divine Destiny</h2>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                            <div>
+                                <p class="font-semibold">Apostle Alfred Makhavhu</p>
+                                <p class="text-gray-600 text-sm">Senior Pastor</p>
+                            </div>
+                        </div>
+                        <div class="prose max-w-none text-gray-700 leading-relaxed">
+                            <p class="mb-4">
+                                In today's world, many believers struggle with understanding their purpose in God's kingdom. We often find ourselves asking, "What is God's plan for my life?" This question has echoed through the hearts of countless individuals who desire to live a life that honors God and fulfills His divine purpose.
+                            </p>
+                            <p class="mb-4">
+                                The Bible tells us in Jeremiah 29:11, "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, to give you hope and a future." This verse reminds us that God has a specific plan for each of our lives, and it's our responsibility to seek Him and discover what that plan entails.
+                            </p>
+                            <p class="mb-4">
+                                Walking in God's purpose requires three essential elements: faith, obedience, and patience. Faith allows us to trust in God's plan even when we cannot see the full picture. Obedience ensures that we follow His guidance even when it challenges our comfort zones. Patience helps us wait for His timing, understanding that God's timing is always perfect.
+                            </p>
+                            <p class="mb-4">
+                                As we journey together in discovering our divine destiny, remember that God has equipped each of us with unique gifts and talents. These are not coincidental but are specifically designed to fulfill His purpose in our lives. When we align our lives with His will, we experience the joy and fulfillment that comes from living in our divine calling.
+                            </p>
+                            <p>
+                                I encourage you to spend time in prayer and meditation, asking God to reveal His purpose for your life. Trust in His guidance, and step boldly into the destiny He has prepared for you.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="article-image" style="position: relative;">
+                        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: rgba(255,255,255,0.7); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; text-align: center;">
+                            Article Image<br>
+                            <span style="font-size: 1rem; text-transform: none; display: block; margin-top: 10px;">800 x 250px</span>
+                        </span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-4">Devotional</span>
+                            <span class="text-gray-500 text-sm">December 12, 2023</span>
+                        </div>
+                        <h2 class="text-3xl font-light mb-6 ember">The Power of Prayer in Daily Life</h2>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                            <div>
+                                <p class="font-semibold">Pastor Bongi Makhavhu</p>
+                                <p class="text-gray-600 text-sm">Co-Pastor</p>
+                            </div>
+                        </div>
+                        <div class="prose max-w-none text-gray-700 leading-relaxed">
+                            <p class="mb-4">
+                                Prayer is not just a religious ritual; it's a powerful communication tool that connects us directly with our Heavenly Father. In our busy lives, we often forget the incredible privilege we have to speak with the Creator of the universe at any moment of the day.
+                            </p>
+                            <p class="mb-4">
+                                When we incorporate prayer into our daily routine, we invite God's presence into every aspect of our lives. Whether we're facing challenges at work, dealing with family issues, or simply going about our daily tasks, prayer transforms our perspective and aligns our hearts with God's will.
+                            </p>
+                            <p class="mb-4">
+                                Start your day with prayer, thanking God for His blessings and asking for His guidance. Throughout the day, offer quick prayers of gratitude, requests for wisdom, or simply acknowledge His presence. End your day by reflecting on His goodness and surrendering your concerns to Him.
+                            </p>
+                            <p class="mb-4">
+                                Remember, prayer is not about using fancy words or long speeches. God desires authentic communication from the heart. He knows your needs before you ask, but He delights in hearing from His children.
+                            </p>
+                            <p>
+                                Make prayer a natural part of your daily life, and watch how God transforms your heart, your circumstances, and your relationship with Him.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="article-image" style="position: relative;">
+                        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: rgba(255,255,255,0.7); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; text-align: center;">
+                            Article Image<br>
+                            <span style="font-size: 1rem; text-transform: none; display: block; margin-top: 10px;">800 x 250px</span>
+                        </span>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm mr-4">Community</span>
+                            <span class="text-gray-500 text-sm">December 10, 2023</span>
+                        </div>
+                        <h2 class="text-3xl font-light mb-6 ember">Youth Ministry Outreach Success</h2>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                            <div>
+                                <p class="font-semibold">Youth Ministry Team</p>
+                                <p class="text-gray-600 text-sm">Community Outreach</p>
+                            </div>
+                        </div>
+                        <div class="prose max-w-none text-gray-700 leading-relaxed">
+                            <p class="mb-4">
+                                We are thrilled to share the incredible success of our recent youth outreach program that took place in our local community. Over the past month, our dedicated youth ministry team reached out to more than 200 young people, sharing the message of hope, love, and salvation through Jesus Christ.
+                            </p>
+                            <p class="mb-4">
+                                The outreach program included various activities such as sports tournaments, music workshops, mentorship sessions, and interactive Bible studies. Our goal was not just to preach but to connect with young people where they are and show them the practical love of Christ through our actions.
+                            </p>
+                            <p class="mb-4">
+                                One of the most impactful moments was when 15 young people made the decision to accept Jesus Christ as their Lord and Savior during our final gathering. The joy and transformation we witnessed in their lives reminded us why this ministry is so important.
+                            </p>
+                            <p class="mb-4">
+                                We also established ongoing mentorship relationships with many of the participants, ensuring that the seeds planted during this outreach will continue to grow. Our youth leaders are committed to walking alongside these young people as they begin their journey of faith.
+                            </p>
+                            <p>
+                                We thank God for His faithfulness and ask for your continued prayers as we expand our youth outreach efforts. Together, we can make a lasting impact on the next generation for the Kingdom of God.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel Section -->
+    <section class="py-20 bg-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-light mb-8">TESTIMONIALS</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Hear from our church family about God's transforming power</p>
+                <div class="ember-bg-subtle h-1 w-24 mx-auto mt-8"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="testimonial-carousel relative">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide active">
+                        <div class="text-center px-8">
+                            <div class="w-20 h-20 bg-gray-600 rounded-full mx-auto mb-6"></div>
+                            <blockquote class="text-2xl font-light mb-6 italic">
+                                "Flames of Fire Church has been a blessing to my family. The teachings are biblical and practical, helping us grow in our faith daily. Apostle Alfred's guidance has transformed our lives."
+                            </blockquote>
+                            <div class="ember-bg-subtle h-1 w-16 mx-auto mb-4"></div>
+                            <cite class="text-lg font-semibold ember-subtle">Sarah Mokoena</cite>
+                            <p class="text-gray-400">Member since 2018</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide">
+                        <div class="text-center px-8">
+                            <div class="w-20 h-20 bg-gray-600 rounded-full mx-auto mb-6"></div>
+                            <blockquote class="text-2xl font-light mb-6 italic">
+                                "The youth ministry here changed my life completely. I found my purpose and calling through the mentorship and biblical teachings. This church truly cares about the next generation."
+                            </blockquote>
+                            <div class="ember-bg-subtle h-1 w-16 mx-auto mb-4"></div>
+                            <cite class="text-lg font-semibold ember-subtle">Thabo Ndlovu</cite>
+                            <p class="text-gray-400">Youth Member</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide">
+                        <div class="text-center px-8">
+                            <div class="w-20 h-20 bg-gray-600 rounded-full mx-auto mb-6"></div>
+                            <blockquote class="text-2xl font-light mb-6 italic">
+                                "Pastor Bongi's devotionals and women's ministry have strengthened my walk with God. The community here is like a true family that supports each other through all seasons of life."
+                            </blockquote>
+                            <div class="ember-bg-subtle h-1 w-16 mx-auto mb-4"></div>
+                            <cite class="text-lg font-semibold ember-subtle">Grace Mthembu</cite>
+                            <p class="text-gray-400">Women's Ministry Leader</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-slide">
+                        <div class="text-center px-8">
+                            <div class="w-20 h-20 bg-gray-600 rounded-full mx-auto mb-6"></div>
+                            <blockquote class="text-2xl font-light mb-6 italic">
+                                "The Bible School at Flames of Fire equipped me with solid biblical foundation. The teaching is excellent and has prepared me for ministry. I'm grateful for this institution."
+                            </blockquote>
+                            <div class="ember-bg-subtle h-1 w-16 mx-auto mb-4"></div>
+                            <cite class="text-lg font-semibold ember-subtle">Pastor John Sibeko</cite>
+                            <p class="text-gray-400">Bible School Graduate</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-slide">
+                        <div class="text-center px-8">
+                            <div class="w-20 h-20 bg-gray-600 rounded-full mx-auto mb-6"></div>
+                            <blockquote class="text-2xl font-light mb-6 italic">
+                                "The outreach programs and community service have shown me what it means to be the hands and feet of Jesus. This church lives out the gospel in practical ways."
+                            </blockquote>
+                            <div class="ember-bg-subtle h-1 w-16 mx-auto mb-4"></div>
+                            <cite class="text-lg font-semibold ember-subtle">Michael Khumalo</cite>
+                            <p class="text-gray-400">Outreach Volunteer</p>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button class="carousel-nav carousel-next" onclick="changeSlide(1)">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Carousel Dots -->
+                <div class="carousel-dots">
+                    <span class="carousel-dot active" onclick="currentSlide(1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(2)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(3)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(4)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+      <footer class="bg-black text-white py-16 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">FO<span class="ember-subtle">F</span></h3>
+                    <p class="text-gray-400">Flames of Fire Church: Igniting passion for God and service to others in the heart of our community.</p>
+                </div>
+               <div>
+                    <h4 class="text-lg font-semibold mb-4">Visit Us</h4>
+                    <p class="text-gray-400 mb-2">797 , Clove Drive</p>
+                    <p class="text-gray-400 mb-2">Zakariyya Park, ext 4</p>
+                    <br>
+                    <p class="text-gray-400 mb-2">732 , Ramapulane Street</p>
+                    <p class="text-gray-400 mb-2">Mofolo South, Soweto</p>
+                    <br>
+                    <p class="text-gray-400 mb-2">660 , Ramaphosa Settlement</p>
+                    <p class="text-gray-400 mb-2">Rustervaal</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400 mb-2">info@flamesoffire.co.za</p>
+                    <p class="text-gray-400 mb-2">(011) 859 1030</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://web.facebook.com/keflamesoffire?_rdc=1&_rdr#" class="text-white hover:text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                            </svg>
+                        </a>
+                       
+                        <a href="https://www.instagram.com/flamesoffire.ministries/" class="text-white hover:text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@flamesoffireministriesfof6097" class="text-white hover:text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@fofministries?is_from_webapp=1&sender_device=pc" class="text-white hover:text-gray-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="text-gray-400 space-y-2">
+                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Community</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Events</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Sermons</a></li>
+                        <li><a href="index.html" class="hover:text-white transition">Books</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                    </ul>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Flames of Fire. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Testimonial Carousel Functionality
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active class from all dots
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show current slide and activate corresponding dot
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlideIndex += direction;
+            
+            if (currentSlideIndex >= totalSlides) {
+                currentSlideIndex = 0;
+            } else if (currentSlideIndex < 0) {
+                currentSlideIndex = totalSlides - 1;
+            }
+            
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f0aa4005cadd69',t:'MTc1NTE3Njc0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
