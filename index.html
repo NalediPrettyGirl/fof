@@ -1,515 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flames of Fire</title>
-    <link rel="shortcut icon" href="Fof/logo.png" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            scroll-behavior: smooth;
-            color: #111;
-        }
-        h1, h2, h3, h4, h5 {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        .ember {
-            color: #E25822;
-        }
-        .ember-subtle {
-            color: #c45124;
-        }
-        .ember-bg {
-            background-color: #E25822;
-        }
-        .ember-bg-subtle {
-            background-color: #c45124;
-        }
-        .ember-border {
-            border-color: #E25822;
-        }
-        /* Scattered image grid for community section */
-        .community-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(12, 1fr);
-            gap: 15px;
-            height: 700px;
-        }
-        .community-item:nth-child(1) {
-            grid-column: 1 / span 6;
-            grid-row: 1 / span 7;
-        }
-        .community-item:nth-child(2) {
-            grid-column: 7 / span 3;
-            grid-row: 1 / span 4;
-        }
-        .community-item:nth-child(3) {
-            grid-column: 10 / span 3;
-            grid-row: 1 / span 6;
-        }
-        .community-item:nth-child(4) {
-            grid-column: 7 / span 4;
-            grid-row: 5 / span 4;
-        }
-        .community-item:nth-child(5) {
-            grid-column: 1 / span 3;
-            grid-row: 8 / span 5;
-        }
-        .community-item:nth-child(6) {
-            grid-column: 4 / span 5;
-            grid-row: 8 / span 5;
-        }
-        .community-item:nth-child(7) {
-            grid-column: 9 / span 4;
-            grid-row: 9 / span 4;
-        }
-        
-        /* Book display grid with varied sizes */
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-gap: 20px;
-        }
-        .book-item:nth-child(1) {
-            grid-column: 1 / span 5;
-        }
-        .book-item:nth-child(2) {
-            grid-column: 6 / span 3;
-        }
-        .book-item:nth-child(3) {
-            grid-column: 9 / span 4;
-        }
-        
-        @media (max-width: 768px) {
-            .community-grid {
-                grid-template-columns: repeat(6, 1fr);
-                grid-template-rows: repeat(24, 1fr);
-                height: 1200px;
-            }
-            .community-item:nth-child(1) {
-                grid-column: 1 / span 6;
-                grid-row: 1 / span 6;
-            }
-            .community-item:nth-child(2) {
-                grid-column: 1 / span 3;
-                grid-row: 7 / span 4;
-            }
-            .community-item:nth-child(3) {
-                grid-column: 4 / span 3;
-                grid-row: 7 / span 5;
-            }
-            .community-item:nth-child(4) {
-                grid-column: 1 / span 4;
-                grid-row: 12 / span 4;
-            }
-            .community-item:nth-child(5) {
-                grid-column: 5 / span 2;
-                grid-row: 12 / span 6;
-            }
-            .community-item:nth-child(6) {
-                grid-column: 1 / span 6;
-                grid-row: 18 / span 4;
-            }
-            .community-item:nth-child(7) {
-                grid-column: 1 / span 6;
-                grid-row: 22 / span 6;
-            }
-            
-            .books-grid {
-                grid-template-columns: 1fr;
-            }
-            .book-item:nth-child(1),
-            .book-item:nth-child(2),
-            .book-item:nth-child(3) {
-                grid-column: 1 / span 1;
-            }
-        }
-        
-        .image-placeholder {
-            background: linear-gradient(45deg);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .image-placeholder::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        .book-cover {
-            aspect-ratio: 2/3;
-            background: linear-gradient(45deg, #222, #000);
-            position: relative;
-        }
-        
-        .book-cover::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-align: center;
-        }
-    </style>
+    <title>Flames of Fire Ministries | Church</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-white text-black">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-black text-white z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-             <a class="navbar-brand"   href="index.html">
-             <img src="Fof/logo.png" width="20%" height="20%" class="logo logo-display" alt="Logo"></a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="hover:text-gray-300 transition">About</a>
-                <a href="#community" class="hover:text-gray-300 transition">Community</a>
-                <a href="#services" class="hover:text-gray-300 transition">Services</a>
-                <a href="#events" class="hover:text-gray-300 transition">Events</a>
-                <a href="#sermons" class="hover:text-gray-300 transition">Sermons</a>
-                <a href="#books" class="hover:text-gray-300 transition">Books</a>
-                <a href="blog.html" class="hover:text-gray-300 transition">Blog</a>
-                
-            </div>
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none text-white">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-black w-full">
-            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
-                <a href="#about" class="py-2 hover:text-gray-300 transition">About</a>
-                <a href="#community" class="py-2 hover:text-gray-300 transition">Community</a>
-                <a href="#services" class="py-2 hover:text-gray-300 transition">Services</a>
-                <a href="#events" class="py-2 hover:text-gray-300 transition">Events</a>
-                <a href="#sermons" class="py-2 hover:text-gray-300 transition">Sermons</a>
-                <a href="#books" class="py-2 hover:text-gray-300 transition">Books</a>
-                <a href="blog.html" class="py-2 hover:text-gray-300 transition">Blog</a>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header class="h-screen flex items-center justify-center bg-black text-white relative">
-        <div class="absolute inset-0 opacity-60 bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" width=\"100\" height=\"100\"><rect width=\"100\" height=\"100\" fill=\"black\"/><path d=\"M0 50 L100 50 M50 0 L50 100\" stroke=\"white\" stroke-width=\"0.5\" stroke-opacity=\"0.2\"/></svg>')]"></div>
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <h1 class="text-5xl md:text-7xl font-light mb-6">FLAMES OF FIRE</h1>
-            <p class="text-xl md:text-2xl font-light max-w-2xl mx-auto mb-10">A place of worship, community, and spiritual growth</p>
-            <div class="ember-bg-subtle h-1 w-24 mx-auto"></div>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="top-bar-placeholder"></div>
+        <div class="top-bar-text">
+            JOIN US EVERY SUNDAY AT 9AM
         </div>
+        <div class="top-bar-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fa-solid fa-podcast"></i></a>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="logo-container" onclick="location.href='index.html'">
+            <img src="img/logo.png" alt="Flames of Fire Logo">
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="events.html">EVENTS</a>
+            <a href="sermons.html">RECENT SERMON</a>
+            <a href="give.html">GIVE</a>
+            <a href="branches.html">BRANCHES</a>
+        </nav>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-light mb-16 text-center">ABOUT US</h2>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
-                    <p class="mb-6 text-gray-700">Flames of Fire Church exists to ignite passion for God by making disciples who love God, grow in community, and serve the world. We are committed to authentic worship, biblical teaching, and compassionate outreach.</p>
-                    <h3 class="text-2xl font-semibold mb-4">Our Vision</h3>
-                    <p class="mb-6 text-gray-700">Our vision is to preach the gospel of Jesus Christ to all who are lost and bound by the chains of Satan. We aim to make disciples of all nations and lead them to their God-given destiny through Christ’s love, healing, and deliverance.</p>
-                <a href="about.html" class="inline-block px-8 py-3 border-2 border-black hover:bg-black hover:text-white transition duration-300">Learn More</a>
-                    
-                  <div class="ember-bg-subtle h-1 w-16 mt-8"></div>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>FLAMES OF FIRE</h1>
+            <h2>MINISTRIES</h2>
+
+            <a href="#" class="btn-watch">WATCH SERVICE ONLINE</a>
+
+            <div class="hero-quote">
+                "He makes His messengers and His servents a flame of fire."
             </div>
-                <div class="md:w-1/2 sm:w-2/2">
-                    <div class="relative h-96 bg-black image-placeholder">
-                        <img src="Fof/13.jpg" width="100%" height="100%" alt="A description of the image">
+            <div class="hero-reference">
+                Psalm 104:4
+            </div>
+        </div>
+
+        <!-- ACTION BUTTONS OVERLAY -->
+        <div class="action-buttons">
+            <a href="events.html" class="action-btn">EVENTS</a>
+            <a href="give.html" class="action-btn">GIVE</a>
+        </div>
+    </section>
+
+    <!-- EVENTS AND SERMONS SECTION -->
+    <section class="events-sermons">
+        <div class="es-container">
+            <!-- Left Side: Next Upcoming Event -->
+            <div class="upcoming-event-card">
+                <div class="ue-date-ribbon">
+                    <div class="ue-day">14</div>
+                    <div class="ue-month-year">May<br>2022</div>
+                </div>
+
+                <div class="ue-content">
+                    <div class="ue-header">
+                        <div class="ue-header-left">
+                            <i class="fa-regular fa-calendar" style="color: #93913E; font-size: 20px;"></i>
+                            <h3 class="ue-title">Next Upcoming Event</h3>
+                        </div>
+                        <div class="ue-time-badge">
+                            <i class="fa-solid fa-circle" style="font-size: 8px; margin-right: 5px;"></i> @ 8 to 11 AM
+                        </div>
                     </div>
+
+                    <h2 class="ue-event-title">Sharing Our Faith & Love To Children</h2>
+
+                    <div class="ue-meta ue-location">
+                        <i class="fa-solid fa-location-dot" style="color: #93913E;"></i> Postal Address : Zakariyya
+                        Clove Drive 797, Ext 1
+                    </div>
+                    <a href="#" class="ue-btn">JOIN US!</a>
+                </div>
+            </div>
+
+            <!-- Right Side: Latest Sermons -->
+            <div class="latest-sermon-card">
+                <div class="ls-header">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                    <h3 class="ls-title">Latest Sermons</h3>
+                    <span class="ls-date">- May 10 - 11, 2026</span>
+                </div>
+
+                <div class="ls-body">
+
+                    <div class="ls-info">
+                        <h4 class="ls-sermon-title">The Law Demands, but Grace Supplies</h4>
+                        <div class="ls-author">- by <span>Apostle Alfred Makhavhu</span></div>
+                    </div>
+                </div>
+
+                <!-- YouTube Embed -->
+                <div class="ls-player" style="margin-top: 20px;">
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        title="Recent Sermon" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen style="border-radius: 10px;"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Community Section -->
-    <section id="community" class="py-20 bg-black text-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-light mb-16 text-center">OUR COMMUNITY</h2>
-            <div class="community-grid">
-                <!-- Community Photos Grid with scattered images of different sizes -->
-                <div class="community-item image-placeholder rounded-md overflow-hidden shadow-lg"><img src="Fof/1.jpg" width="100%" height="100%" alt="A description of the image"></div>
-                <div class="community-item image-placeholder rounded-md overflow-hidden shadow-lg"><img src="Fof/3.jpg" width="100%" height="100%" alt="A description of the image"></div>
-                <div class="community-item image-placeholder rounded-md overflow-hidden shadow-lg"><img src="Fof/11.jpg"  width="100%" height="100%" alt="A description of the image"></div>
-                <div class="community-item image-placeholder rounded-md overflow-hidden shadow-lg"><img src="Fof/4.jpg"  width="100%" height="100%" alt="A description of the image"></div>
-                <div class="community-item image-placeholder rounded-md overflow-hidden shadow-lg"><img src="Fof/5.jpg"  width="100%" height="100%" alt="A description of the image"></div>
-                <div class="community-item image-placeholder rounded-md overflow-hidden shadow-lg"><img src="Fof/14.jpg"  width="100%" height="100%" alt="A description of the image"></div>
-                <div class="community-item image-placeholder rounded-md overflow-hidden shadow-lg"><img src="Fof/7.jpg"  width="100%" height="100%" alt="A description of the image"></div>
+    <!-- FELLOWSHIPS SECTION -->
+    <section class="fellowships">
+        <div class="section-headers">
+            <h4 class="sub-heading">OUR FELLOWSHIPS</h4>
+            <h2 class="main-heading">Spreading His Love</h2>
+        </div>
+
+        <div class="fellowship-cards">
+            <!-- Card 1: Worship Service -->
+            <div class="card">
+                <div class="card-logo">
+                    <i class="fa-solid fa-church" style="font-size: 24px; color: #020246;"></i>
+                </div>
+                <h3>Worship Service</h3>
+                <p>Sundays at 9:00 AM. Join us for a powerful time of worship and word. Holy Communion is observed every
+                    first Sunday of the month.</p>
             </div>
-            <div class="mt-16 text-center">
-                <p class="text-xl max-w-2xl mx-auto mb-8">Our church family is diverse and welcoming. We believe in building meaningful relationships that support and encourage one another in faith and life.</p>
+
+            <!-- Card 2: Children's Church -->
+            <div class="card">
+                <div class="card-logo">
+                    <i class="fa-solid fa-child-reaching" style="font-size: 24px; color: #020246;"></i>
+                </div>
+                <h3>Children's Church</h3>
+                <p>Sundays at 9:00 AM. "But Jesus said, Suffer little children, and forbid them not, to come unto me:
+                    for of such is the kingdom of heaven." (Matthew 19:14)</p>
+            </div>
+
+            <!-- Card 3: Prayer -->
+            <div class="card">
+                <div class="card-logo">
+                    <i class="fa-solid fa-hands-praying" style="font-size: 24px; color: #020246;"></i>
+                </div>
+                <h3>Weekly Prayer</h3>
+                <p>Wednesdays from 6:00 PM - 7:00 PM. "Pray without ceasing." (1 Thessalonians 5:17). Join our
+                    intercession group as we seek God's face.</p>
+            </div>
+
+            <!-- Card 4: Youth Fellowship -->
+            <div class="card">
+                <div class="card-logo">
+                    <i class="fa-solid fa-users-rays" style="font-size: 24px; color: #020246;"></i>
+                </div>
+                <h3>Youth Fellowship</h3>
+                <p>Fridays from 6:00 PM - 8:00 PM. "Let no man despise thy youth; but be thou an example of the
+                    believers..." (1 Timothy 4:12)</p>
+            </div>
+
+            <!-- Card 5: Combined Ministry -->
+            <div class="card">
+                <div class="card-logo" style="display: flex; gap: 15px;">
+                    <i class="fa-solid fa-person-dress" style="font-size: 24px; color: #020246;"></i>
+                    <i class="fa-solid fa-user-tie" style="font-size: 24px; color: #020246;"></i>
+                </div>
+                <h3>Womens and Mens Ministry</h3>
+                <p><strong>Women:</strong> Held every 3rd Saturday of the month. (Proverbs 31:29)<br>
+                    <strong>Men:</strong> Held every 3rd Saturday of the month. (1 Corinthians 16:13)
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-light mb-16 text-center">SERVICES & TIMES</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-8 border border-gray-200 hover:border-black transition-colors duration-300 bg-black text-white">
-                    <h3 class="text-2xl font-semibold mb-4">Worship Service</h3>
-                    <h3 class="text-2xl font-semibold mb-4">Sunday</h3>
-                    <p class="text-xl mb-2 ember-subtle">9:00 AM</p>
-                    <p class="text-gray-300 mb-6">Worship Service</p>
-                    <p class="text-xl mb-2 ember-subtle"> 2:00 PM</p>
-                    <p class="text-gray-300">End Of Service</p>
-                </div>
-                <div class="p-8 border border-gray-200 hover:border-black transition-colors duration-300">
-                    <h3 class="text-2xl font-semibold mb-4">Prayer</h3>
-                    <h3 class="text-2xl font-semibold mb-4">Wednesday</h3>
-                    <p class="text-xl mb-2 ember-subtle">6:00 PM</p>
-                    <p class="text-gray-700 mb-6">Prayer</p>
-                    <p class="text-xl mb-2 ember-subtle">7:00 PM</p>
-                    <p class="text-gray-700">End Of Prayer</p>
-                </div>
-                <div class="p-8 border border-gray-200 hover:border-black transition-colors duration-300 bg-black text-white">
-                    <h3 class="text-2xl font-semibold mb-4">Youth Fellowship</h3>
-                    <h3 class="text-2xl font-semibold mb-4">Friday</h3>
-                    <p class="text-xl mb-2 ember-subtle">6:00 PM</p>
-                    <p class="text-gray-300 mb-6">Young People Fellowship</p>
-                    <p class="text-xl mb-2 ember-subtle">7:30 PM</p>
-                    <p class="text-gray-300">End Of Youth Fellowship</p>
+    <!-- BUILDING PROJECT CTA -->
+    <section class="building-cta" style="padding: 100px 40px; background: #0b1118; color: #fff; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h4 style="color: #93913E; letter-spacing: 2px;">BUILDING THE FUTURE</h4>
+            <h2 style="font-size: 36px; margin: 20px 0; font-family: 'Times New Roman', serif;">Help Us Build His House
+            </h2>
+            <p style="color: #bbb; line-height: 1.8; margin-bottom: 30px;">
+                "Unless the Lord builds the house, the builders labor in vain." (Psalm 127:1). Join us in building a
+                sanctuary for our children and future generations.
+            </p>
+            <a href="give.html" class="btn-primary"
+                style="background: #93913E; color: #fff; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: 700; display: inline-block;">SUPPORT
+                THE PROJECT</a>
+        </div>
+    </section>
+
+    <!-- GALLERY CAROUSEL SECTION -->
+    <section class="gallery-section">
+        <div class="section-headers" style="text-align: center; margin-bottom: 30px;">
+            <h4 class="sub-heading">CHURCH LIFE</h4>
+            <h2 class="main-heading">Photo Gallery</h2>
+        </div>
+
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev-btn" aria-label="Previous Image"><i
+                    class="fa-solid fa-chevron-left"></i></button>
+            <div class="carousel-track">
+                <img src="https://via.placeholder.com/600x400/020246/fff?text=Church+Life+1" alt="Church Service">
+                <img src="https://via.placeholder.com/600x400/93913E/fff?text=Church+Life+2" alt="Worship Event">
+                <img src="https://via.placeholder.com/600x400/555555/fff?text=Church+Life+3" alt="Community Outreach">
+                <img src="https://via.placeholder.com/600x400/111161/fff?text=Church+Life+4" alt="Youth Group">
+                <img src="https://via.placeholder.com/600x400/c9932d/fff?text=Church+Life+5" alt="Fellowship">
+                <img src="https://via.placeholder.com/600x400/0a0a6b/fff?text=Church+Life+6" alt="Sunday Sermon">
+            </div>
+            <button class="carousel-btn next-btn" aria-label="Next Image"><i
+                    class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+
+    <!-- SCRIPTURE READINGS SECTION (Image Upload) -->
+    <section class="scripture-readings-image">
+        <div class="sr-image-wrapper">
+            <!-- Upload your weekly scripture reading image here -->
+            <img src="img/readings.jpeg" alt="Weekly Scripture Reading" class="sr-upload-image">
+        </div>
+    </section>
+
+    <!-- FEATURED RESOURCES SECTION (DARK THEME PREVIEW) -->
+    <section class="available-books"
+        style="background-color: #fff; padding: 120px 40px; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+        <div class="book-feature-container"
+            style="max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 80px; flex-wrap: wrap;">
+            <div class="book-feature-visual" style="flex: 1; text-align: center;">
+                <div class="book-mockup"
+                    style="transform: perspective(1000px) rotateY(-10deg); box-shadow: 0 40px 80px rgba(0,0,0,0.15); display: inline-block; position: relative;">
+                    <img src="pastor_headshot_1774424061013.png" alt="Born of the Supernatural"
+                        style="width: 100%; max-width: 380px; border-radius: 4px 8px 8px 4px; border-left: 10px solid #020246;">
+                    <div
+                        style="position: absolute; bottom: 30px; left: 0; right: 0; background: rgba(2, 2, 70, 0.9); padding: 15px; font-size: 11px; letter-spacing: 2px; font-weight: 600; color: #fff;">
+                        INSPIRED BY THE REAL LIFE STORY</div>
                 </div>
             </div>
-            <div class="mt-16 text-center">
-                <p class="text-xl max-w-2xl mx-auto mb-8">All services include worship, prayer, and biblical teaching. Children's programs are available during Sunday services.</p>
-                <div class="ember-bg-subtle h-1 w-24 mx-auto"></div>
+            <div class="book-feature-content" style="flex: 1.2;">
+                <h4 class="sub-heading" style="color: #93913E; margin-bottom: 15px; letter-spacing: 3px;">FEATURED
+                    RESOURCES</h4>
+                <h2 class="main-heading"
+                    style="color: #020246; font-size: 46px; font-family: 'Times New Roman', serif; margin-bottom: 25px;">
+                    Born Of The Supernatural</h2>
+                <p class="book-description"
+                    style="color: #555; line-height: 1.8; font-size: 18px; margin-bottom: 35px; font-weight: 400;">
+                    A practical guide to applying biblical faith principles to everyday challenges and opportunities.
+                </p>
+                <div class="book-author-meta"
+                    style="border-left: 3px solid #93913E; padding-left: 20px; display: flex; align-items: center; gap: 20px; margin-bottom: 45px;">
+                    <img src="pastor_headshot_1774424061013.png" alt="Apostle Makhavhu"
+                        style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid #93913E; object-fit: cover;">
+                    <div class="author-info">
+                        <strong style="color: #111; font-size: 18px;">Apostle Alfred Makhavhu</strong>
+                        <span
+                            style="color: #93913E; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Author
+                            & Visionary</span>
+                    </div>
+                </div>
+                <div class="book-actions">
+                    <a href="#" class="btn-primary"
+                        style="background: #93913E; color: #fff; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 16px; display: inline-block; transition: all 0.3s; box-shadow: 0 10px 20px rgba(147,145,62,0.3);">BUY
+                        ON AMAZON <i class="fa-solid fa-cart-shopping" style="margin-left: 10px;"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Events Section -->
-    <section id="events" class="py-20 bg-black text-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-light mb-16 text-center">UPCOMING EVENTS</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-900 p-8">
-                    <div class="flex items-start">
-                        <div class="mr-6 text-center">
-                            <div class="text-3xl font-bold ember-subtle">15</div>
-                            <div class="uppercase text-sm tracking-wider">May</div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">Women Of Excellence</h3>
-                            <p class="text-gray-400 mb-4">11:00 AM - 3:00 PM | City Park</p>
-                            <p class="text-gray-300">Join us for food, games, and fellowship at our annual church picnic. Bring a side dish to share!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-900 p-8">
-                    <div class="flex items-start">
-                        <div class="mr-6 text-center">
-                            <div class="text-3xl font-bold ember-subtle">22</div>
-                            <div class="uppercase text-sm tracking-wider">May</div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">Volunteer Day</h3>
-                            <p class="text-gray-400 mb-4">9:00 AM - 1:00 PM | Community Center</p>
-                            <p class="text-gray-300">Help us serve our community by volunteering at the local food bank and community center.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-900 p-8">
-                    <div class="flex items-start">
-                        <div class="mr-6 text-center">
-                            <div class="text-3xl font-bold ember-subtle">5</div>
-                            <div class="uppercase text-sm tracking-wider">Jun</div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">Men's ministry</h3>
-                            <p class="text-gray-400 mb-4">7:00 PM - 8:30 PM | Church Fellowship Hall</p>
-                            <p class="text-gray-300">Six-week study on the Book of Romans. Materials provided. All are welcome to attend.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-900 p-8">
-                    <div class="flex items-start">
-                        <div class="mr-6 text-center">
-                            <div class="text-3xl font-bold ember-subtle">19</div>
-                            <div class="uppercase text-sm tracking-wider">Jun</div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">Youth Summer Camp</h3>
-                            <p class="text-gray-400 mb-4">December 19-23 | Mountain Retreat Center</p>
-                            <p class="text-gray-300">A week of fun, fellowship, and spiritual growth for students grades 6-12. Registration required.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- SERVICE INFO BAR -->
+    <section class="service-info-bar">
+        <div class="sib-container">
+            <div class="sib-col">
+                <h3>Service Times</h3>
+                <p><strong>Sunday Mornings</strong></p>
+                <p>In-Person & Online at 9am</p>
             </div>
-            
-        </div>
-    </section>
-
-    <!-- Sermons Section -->
-    <section id="sermons" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-light mb-16 text-center">RECENT SERMONS</h2>
-            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="border-t-4 ember-border pt-6 bg-black text-white p-6">
-                    <p class="text-sm text-gray-400 mb-2">THUSDAY TEACHINGS</p>
-                    <h3 class="text-xl font-semibold mb-3">The Power of Faith</h3>
-                    <p class="text-gray-300 mb-4">Apostol Alfred Makhavhu explores Hebrews 11 and the transformative power of faith in our daily lives.</p>
-                    <a href="#" class="text-white hover:text-gray-300 font-medium flex items-center">
-                        Listen Now
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                        </svg>
-                    </a>
-                </div>
-                <div class="border-t-4 ember-border pt-6">
-                    <p class="text-sm text-gray-500 mb-2">SUNDAY SERMON</p>
-                    <h3 class="text-xl font-semibold mb-3">Living with Purpose</h3>
-                    <p class="text-gray-700 mb-4">Pastor Bongi Makhavhu discusses how to discover and live out God's purpose for your life based on Ephesians 2:10.</p>
-                    <a href="#" class="text-black hover:text-gray-600 font-medium flex items-center">
-                        Listen Now
-                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                        </svg>
-                    </a>
-                </div>
-                
-                
-                
-                
+            <div class="sib-col">
+                <h3>Contact Info</h3>
+                <p>011 706 7565</p>
+                <p>info@flamesoffireministries.co.za</p>
             </div>
-            <div class="mt-12 text-center">
-                <a href="https://web.facebook.com/keflamesoffire?_rdc=1&_rdr#" class="inline-block px-8 py-3 border-2 border-black hover:bg-black hover:text-white transition duration-300">SERMON ARCHIVE</a>
+            <div class="sib-col">
+                <h3>Follow Us</h3>
+                <div class="sib-social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#" aria-label="Podcast"><i class="fa-solid fa-podcast"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Books Section -->
-    <section id="books" class="py-20 bg-black text-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-light mb-16 text-center">AVAILABLE BOOKS</h2>
-            <div class="books-grid">
-                <!-- Book covers with different sizes -->
-                <div class="book-item p-6 bg-gray-900">
-                    <div class="book-cover mb-6 shadow-lg"><img src="Fof/15.jpg" width="100%" height="100%" alt="A description of the image"></div>
-                    <h3 class="text-xl font-semibold mb-2">Born Of The Supernatural</h3>
-                    <p class="text-gray-400 mb-4">By Apostol Alfred Makhavhu</p>
-                    <p class="text-gray-300 mb-6">A practical guide to applying biblical faith principles to everyday challenges and opportunities.</p>
-                    <a href="https://www.amazon.com" target="_blank" class="inline-block px-6 py-2 bg-white text-black hover:bg-gray-200 transition">Buy on Amazon</a>
-                </div>
-             
-            </div>
-        </div>
+    <!-- Scroll to Top Button -->
+    <a href="#" id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 
-    </section>
+    <!-- Script file linked -->
+    <script src="script.js"></script>
+</body>
 
-    <!-- Footer -->
-    <footer class="bg-black text-white py-16 border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">FO<span class="ember-subtle">F</span></h3>
-                    <p class="text-gray-400">Flames of Fire Church: Igniting passion for God and service to others in the heart of our community.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Visit Us</h4>
-                    <p class="text-gray-400 mb-2">797 , Clove Drive</p>
-                    <p class="text-gray-400 mb-2">Zakariyya Park, ext 4</p>
-                    <br>
-                    <p class="text-gray-400 mb-2">732 , Ramapulane Street</p>
-                    <p class="text-gray-400 mb-2">Mofolo South, Soweto</p>
-                    <br>
-                    <p class="text-gray-400 mb-2">660 , Ramaphosa Settlement</p>
-                    <p class="text-gray-400 mb-2">Rustervaal</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <p class="text-gray-400 mb-2">info@flamesoffire.co.za</p>
-                    <p class="text-gray-400 mb-2">(011) 859 1030</p>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="https://web.facebook.com/keflamesoffire?_rdc=1&_rdr#" class="text-white hover:text-gray-400">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
-                            </svg>
-                        </a>
-                       
-                        <a href="https://www.instagram.com/flamesoffire.ministries/" class="text-white hover:text-gray-400">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
-                            </svg>
-                        </a>
-                        <a href="https://www.youtube.com/@flamesoffireministriesfof6097" class="text-white hover:text-gray-400">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                            </svg>
-                        </a>
-                        <a href="https://www.tiktok.com/@fofministries?is_from_webapp=1&sender_device=pc" class="text-white hover:text-gray-400">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="text-gray-400 space-y-2">
-                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="index.html" class="hover:text-white transition">Community</a></li>
-                        <li><a href="index.html" class="hover:text-white transition">Services</a></li>
-                        <li><a href="index.html" class="hover:text-white transition">Events</a></li>
-                        <li><a href="index.html" class="hover:text-white transition">Sermons</a></li>
-                        <li><a href="index.html" class="hover:text-white transition">Books</a></li>
-                        <li><a href="index.html" class="hover:text-white transition">Blog</a></li>
-                    </ul>
-            </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Flames of Fire. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const navHeight = document.querySelector('nav').offsetHeight;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
-        });
-    </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9692148271724ec1',t:'MTc1NDE4NDk0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

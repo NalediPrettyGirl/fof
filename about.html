@@ -1,457 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Flames of Fire Church</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            scroll-behavior: smooth;
-            color: #111;
-        }
-        h1, h2, h3, h4, h5 {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        .ember {
-            color: #E25822;
-        }
-        .ember-subtle {
-            color: #c45124;
-        }
-        .ember-bg {
-            background-color: #E25822;
-        }
-        .ember-bg-subtle {
-            background-color: #c45124;
-        }
-        .ember-border {
-            border-color: #E25822;
-        }
-        
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #E25822, transparent);
-            margin: 3rem 0;
-        }
-        
-        .faith-statement {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-left: 4px solid #E25822;
-        }
-        
-        .commitment-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .commitment-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .objective-item {
-            position: relative;
-            padding-left: 2rem;
-        }
-        
-        .objective-item::before {
-            content: "🔥";
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 1.2rem;
-        }
-        
-        .hero-image {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(45deg, #333, #111);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .image-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(45deg, #333, #111);
-        }
-         .center{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-image {
-                height: 300px;
-            }
-        }
-    </style>
+    <title>About Us | Flames of Fire Ministries</title>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-white text-black">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-black text-white z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3 hover:text-gray-300 transition">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-                <span class="text-sm">Back</span>
-            </a>
-             <a class="navbar-brand" href="index.html">
-             <img src="Fof/logo.png" width="10%" height="10%" class="center" alt="Logo"></a><div class="w-16"></div> <!-- Spacer for centering -->
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header class="h-screen flex items-center justify-center bg-black text-white relative">
-        <!-- Hero Background Image -->
-        <div class="absolute inset-0">
-            <div class="hero-image w-full h-full" style="position: relative;">
-                <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-                
-            </div>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="top-bar-placeholder"></div>
+        <div class="top-bar-text">
+            JOIN US IN-PERSON & ONLINE EVERY SUNDAY AT 9AM
         </div>
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <h1 class="text-5xl md:text-7xl font-light mb-6">ABOUT US</h1>
-            <p class="text-xl md:text-2xl font-light max-w-2xl mx-auto mb-10">Discover our heart, vision, and commitment to serving God and our community</p>
-            <div class="ember-bg-subtle h-1 w-24 mx-auto"></div>
+        <div class="top-bar-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fa-solid fa-podcast"></i></a>
         </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="logo-container" onclick="location.href='index.html'">
+            <img src="img/logo.png" alt="Flames of Fire Logo">
+        </div>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="about.html" class="active">ABOUT</a>
+            <a href="events.html">EVENTS</a>
+            <a href="sermons.html">RECENT SERMON</a>
+            <a href="give.html">GIVE</a>
+            <a href="branches.html">BRANCHES</a>
+        </nav>
     </header>
 
-    <!-- Overview Section -->
-    <section id="overview" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <h2 class="text-4xl font-light mb-8 ember">ABOUT APOSTLE ALFRED MAKHAVHU</h2>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        Apostle Makhavhu was born in 1965 in Diepkloof, Soweto in a family of six children. He married Bongi Makhavhu and is blessed with two sons.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        As a faithful servant of the Lord, he strives to establish order, excellence and integrity in the Body of Christ. His accomplishments achieved in the spreading of God's Word are indicative of his growth and contribution to the Kingdom of God.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        Apostle Makhavhu was ordained in 1988 at FaithWays Bible Church, where he served as a youth pastor. He was called to fulltime ministry in 1995 and founded Flames of Fire Ministries in Rockville Soweto. Under his ministry the church grew and in 2001, he established a branch of Flames of Fire in Zakariyya Park.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-                        In 2004, he established the Christ Kingdom Missions which seeks to bring leaders from various denominations together in the Body of Christ to fight the common enemy and speak with one voice. In 2005, he established a Flames of Fire Bible School which is an extension of Teamwork Bible College International (TBCI), recognized and accredited by the Accrediting Commission International (ACI).
-                    </p>
-                    <div class="ember-bg-subtle h-1 w-16"></div>
+    <!-- PAGE HERO -->
+    <section class="page-hero about-hero">
+        <div class="hero-content">
+            <h4 class="sub-heading" style="color: #fff;">OUR MISSION</h4>
+            <h1>About Us</h1>
+        </div>
+    </section>
+
+    <!-- OUR VISION SECTION -->
+    <section class="about-vision" style="padding: 80px 40px; background: #fff; text-align: center;">
+        <div class="about-container" style="max-width: 900px; margin: 0 auto;">
+            <h4 class="sub-heading">THE CALLING</h4>
+            <h2 class="main-heading" style="color: #020246; margin-bottom: 30px;">Our Vision</h2>
+            <p style="font-size: 20px; line-height: 1.8; color: #555; font-style: italic;">
+                "As Flames of Fire Ministries, we are called to preach the gospel of the Kingdom of Jesus Christ to all
+                who are lost and bound by the chains of Satan. To teach and make disciples of all nations and through
+                God's grace lead them to their destiny. Minister Christ's love, healing and deliverance."
+            </p>
+        </div>
+    </section>
+
+    <!-- OUR COMMITMENTS SECTION -->
+    <section class="about-commitments" style="padding: 80px 40px; background: #f7f7f7;">
+        <div class="about-container" style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h2 class="main-heading" style="color: #020246;">Our Commitments</h2>
+            </div>
+            <div class="mv-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="mv-item">
+                    <i class="fa-solid fa-book-bible"></i>
+                    <h3>Biblical Principles & Leadership</h3>
+                    <p>Teach the biblical principles without compromise & make godly leaders.</p>
                 </div>
-                <div class="lg:w-1/2 md:w-2/2 sm:w-2/2">
-                    
-                        <img src="Fof/17.jpg" width="150%" height="150%" alt="A description of the image"> </span>
-                    
+                <div class="mv-item">
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Order & Excellence</h3>
+                    <p>Promote order & excellence in the Kingdom of Christ.</p>
+                </div>
+                <div class="mv-item">
+                    <i class="fa-solid fa-people-group"></i>
+                    <h3>Unity in Christ</h3>
+                    <p>Promote unity in the Body of Christ.</p>
+                </div>
+                <div class="mv-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>Culture of Learning</h3>
+                    <p>Encourage the culture of learning within our community.</p>
+                </div>
+                <div class="mv-item">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <h3>Covenant Partners</h3>
+                    <p>Assist and support our covenant partners to discover their gifts and reach their full potential
+                        in Christ.</p>
+                </div>
+                <div class="mv-item">
+                    <i class="fa-solid fa-heart"></i>
+                    <h3>Love & Respect</h3>
+                    <p>Treat all people with love & respect as Christ commanded.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Vision Section -->
-    <section id="vision" class="py-20 bg-black text-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-light mb-8">OUR VISION</h2>
-                <div class="ember-bg-subtle h-1 w-24 mx-auto mb-8"></div>
+    <!-- OUR OBJECTIVES -->
+    <section class="about-objectives" style="padding: 80px 40px; background: #fff;">
+        <div class="about-container" style="max-width: 1000px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h2 class="main-heading" style="color: #020246;">Our Objectives</h2>
             </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <p class="text-2xl font-light mb-8 ember-subtle leading-relaxed">
-                        "As Flames of Fire Ministries, we are called to preach the gospel of the Kingdom of Jesus Christ to all who are lost and bound by the chains of Satan. To teach and make disciples of all nations and through God's grace lead them to their destiny. Minister Christ's love, healing and deliverance."
-                    </p>
+            <div class="mv-grid">
+                <div class="mv-item">
+                    <i class="fa-solid fa-fire"></i>
+                    <h3>Five Fold Ministry</h3>
+                    <p>To establish five fold ministry within a strong biblical governance structure.</p>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">Preach</h3>
-                        <p class="text-gray-300">Proclaiming the gospel of Jesus Christ with boldness and clarity.</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M18.36 9l.6 3H5.04l.6-3h12.72M20 4H4v2h16V4zm1.5 4h-19L5 12v8h14v-8l-1.5-4zM12 15.5c-1.25 0-2.25-1-2.25-2.25S10.75 11 12 11s2.25 1 2.25 2.25-1 2.25-2.25 2.25z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">Deliver</h3>
-                        <p class="text-gray-300">Setting the captives free from Satan's chains through God's power.</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.5 7h-5c-.83 0-1.5.67-1.5 1.5 0 .83.67 1.5 1.5 1.5H16l1.8 5.4L15 16.5V22h2zm-7.5-10.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S11 9.17 11 10s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm2 16v-7H9l-1.5-4.5c-.31-.93-1.31-1.5-2.25-1.5H2v2h2.75L7 18v4h.5z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">Disciple</h3>
-                        <p class="text-gray-300">Making disciples of all nations as commanded by Christ.</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">Guide</h3>
-                        <p class="text-gray-300">Leading people to their God-given destiny through His grace and love.</p>
-                    </div>
+                <div class="mv-item">
+                    <i class="fa-solid fa-crown"></i>
+                    <h3>Godly Leadership</h3>
+                    <p>Produce sound, godly leadership transforming society.</p>
+                </div>
+                <div class="mv-item">
+                    <i class="fa-solid fa-cross"></i>
+                    <h3>Unity of Faith</h3>
+                    <p>Establish unity of faith in the Body of Christ.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Commitments Section -->
-    <section id="commitments" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-light mb-8 ember">OUR COMMITMENTS</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">These core commitments guide everything we do as a church community</p>
+    <!-- FOUNDER SECTION -->
+    <section class="leadership" style="padding: 80px 40px; background: #f7f7f7;">
+        <div class="about-container"
+            style="max-width: 1100px; margin: 0 auto; display: flex; gap: 50px; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <img src="pastor_headshot_1774424061013.png" alt="Apostle Alfred Makhavhu"
+                    style="width: 100%; border-radius: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); object-fit: cover;">
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="commitment-card bg-white p-8 rounded-lg shadow-lg border-t-4 ember-border">
-                    <div class="w-12 h-12 mb-6 ember-bg rounded-full flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Biblical Principles & Leadership</h3>
-                    <p class="text-gray-700">Teach the biblical principles without compromise & make godly leaders</p>
+            <div style="flex: 1.5; min-width: 300px;">
+                <h4 class="sub-heading">OUR FOUNDER</h4>
+                <h2 class="main-heading" style="color: #020246;">Apostle Alfred Makhavhu</h2>
+                <p style="margin-top: 20px; line-height: 1.8; color: #555;">
+                    Apostle Makhavhu was born in 1965 in Diepkloof, Soweto in a family of six children. He married Bongi
+                    Makhavhu and is blessed with two sons. As a faithful servant of the Lord, he strives to establish
+                    order, excellence and integrity in the Body of Christ.
+                </p>
+                <p style="margin-top: 20px; line-height: 1.8; color: #555;">
+                    Ordained in 1988, he founded Flames of Fire Ministries in Rockville Soweto in 1995. Under his
+                    ministry, the church has expanded significantly, establishing major branches in Zakariyya Park and
+                    across Gauteng. He also founded the Christ Kingdom Missions and the Flames of Fire Bible School,
+                    accredited by Teamwork Bible College International.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATEMENT OF FAITH -->
+    <section class="statement-faith" style="padding: 100px 40px; background: #fff;">
+        <div class="about-container" style="max-width: 1100px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h4 class="sub-heading">WHAT WE BELIEVE</h4>
+                <h2 class="main-heading" style="color: #020246;">Statement of Faith</h2>
+            </div>
+            <div class="mv-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="mv-item" style="text-align: left; padding: 30px;">
+                    <h3>One God in Three Persons</h3>
+                    <p>We believe in one God, Creator of all things, existing in three persons, Father, Son, and Holy
+                        Spirit.</p>
                 </div>
-                
-                <div class="commitment-card bg-white p-8 rounded-lg shadow-lg border-t-4 ember-border">
-                    <div class="w-12 h-12 mb-6 ember-bg rounded-full flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Order & Excellence</h3>
-                    <p class="text-gray-700">Promote order & excellence in the Kingdom of Christ</p>
+                <div class="mv-item" style="text-align: left; padding: 30px;">
+                    <h3>Jesus Christ - God the Son</h3>
+                    <p>We believe that Jesus Christ is God the Son, born of the virgin, died on the cross for our sins
+                        and rose again.</p>
                 </div>
-                
-                <div class="commitment-card bg-white p-8 rounded-lg shadow-lg border-t-4 ember-border">
-                    <div class="w-12 h-12 mb-6 ember-bg rounded-full flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Unity in Christ</h3>
-                    <p class="text-gray-700">Promote unity in the Body of Christ</p>
+                <div class="mv-item" style="text-align: left; padding: 30px;">
+                    <h3>The Second Birth</h3>
+                    <p>We believe in the second birth through the Holy Spirit.</p>
                 </div>
-                
-                <div class="commitment-card bg-white p-8 rounded-lg shadow-lg border-t-4 ember-border">
-                    <div class="w-12 h-12 mb-6 ember-bg rounded-full flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Culture of Learning</h3>
-                    <p class="text-gray-700">Encourage the culture of learning</p>
+                <div class="mv-item" style="text-align: left; padding: 30px;">
+                    <h3>The Holy Scriptures</h3>
+                    <p>We believe the Bible is the Word of God and all Scriptures, both Old and New Testament are
+                        inspired by God.</p>
                 </div>
-                
-                <div class="commitment-card bg-white p-8 rounded-lg shadow-lg border-t-4 ember-border">
-                    <div class="w-12 h-12 mb-6 ember-bg rounded-full flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Covenant Partners</h3>
-                    <p class="text-gray-700">Assist and support our covenant partners to discover their gifts and reach their full potential in Christ</p>
+                <div class="mv-item" style="text-align: left; padding: 30px;">
+                    <h3>The Second Coming</h3>
+                    <p>We believe in the second coming of Jesus Christ to the earth as He promised.</p>
                 </div>
-                
-                <div class="commitment-card bg-white p-8 rounded-lg shadow-lg border-t-4 ember-border">
-                    <div class="w-12 h-12 mb-6 ember-bg rounded-full flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Love & Respect</h3>
-                    <p class="text-gray-700">Treat all people with love & respect</p>
+                <div class="mv-item" style="text-align: left; padding: 30px;">
+                    <h3>Christ as Head</h3>
+                    <p>We believe that Jesus Christ is the Head of the universal church.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Objectives Section -->
-    <section id="objectives" class="py-20 bg-black text-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-light mb-8">OUR OBJECTIVES</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Strategic goals that drive our ministry and mission</p>
-                <div class="ember-bg-subtle h-1 w-24 mx-auto mt-8"></div>
+    <!-- SERVICE INFO BAR -->
+    <section class="service-info-bar">
+        <div class="sib-container">
+            <div class="sib-col">
+                <h3>Service Times</h3>
+                <p><strong>Sunday Mornings</strong></p>
+                <p>In-Person & Online at 9am</p>
             </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="space-y-8">
-                    <div class="objective-item">
-                        <h3 class="text-xl font-semibold mb-3 ember-subtle">Five Fold Ministry</h3>
-                        <p class="text-gray-300">To establish five fold ministry within a strong biblical governance structure</p>
-                    </div>
-                    
-                    <div class="objective-item">
-                        <h3 class="text-xl font-semibold mb-3 ember-subtle">Godly Leadership</h3>
-                        <p class="text-gray-300">Produce sound, godly leadership transforming society</p>
-                    </div>
-                    
-                    <div class="objective-item">
-                        <h3 class="text-xl font-semibold mb-3 ember-subtle">Unity of Faith</h3>
-                        <p class="text-gray-300">Establish unity of faith in the Body of Christ</p>
-                    </div>
+            <div class="sib-col">
+                <h3>Contact Info</h3>
+                <p>011 706 7565</p>
+                <p>info@flamesoffireministries.co.za</p>
+            </div>
+            <div class="sib-col">
+                <h3>Follow Us</h3>
+                <div class="sib-social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#" aria-label="Podcast"><i class="fa-solid fa-podcast"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Statement of Faith Section -->
-    <section id="faith" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-light mb-8 ember">STATEMENT OF FAITH</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">The foundational beliefs that guide our church and ministry</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto space-y-8">
-                <div class="faith-statement p-8 rounded-lg">
-                    <h3 class="text-2xl font-semibold mb-4 ember">One God in Three Persons</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        We believe in one God, Creator of all things, existing in three persons, Father, Son, and Holy Spirit.
-                    </p>
-                </div>
-                
-                <div class="faith-statement p-8 rounded-lg">
-                    <h3 class="text-2xl font-semibold mb-4 ember">Jesus Christ - God the Son</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        We believe that Jesus Christ is God the Son, born of the virgin, died on the cross for our sins and rose again.
-                    </p>
-                </div>
-                
-                <div class="faith-statement p-8 rounded-lg">
-                    <h3 class="text-2xl font-semibold mb-4 ember">The Second Birth</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        We believe in the second birth through the Holy Spirit.
-                    </p>
-                </div>
-                
-                <div class="faith-statement p-8 rounded-lg">
-                    <h3 class="text-2xl font-semibold mb-4 ember">The Holy Scriptures</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        We believe the Bible is the Word of God and all Scriptures, both Old and New Testament are inspired by God.
-                    </p>
-                </div>
-                
-                <div class="faith-statement p-8 rounded-lg">
-                    <h3 class="text-2xl font-semibold mb-4 ember">The Second Coming of Christ</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        We believe in the second coming of Jesus Christ to the earth as He promised.
-                    </p>
-                </div>
-                
-                <div class="faith-statement p-8 rounded-lg">
-                    <h3 class="text-2xl font-semibold mb-4 ember">Christ as Head of the Church</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        We believe that Jesus Christ is the Head of the universal church.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <a href="#" id="scroll-to-top" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+    <script src="script.js"></script>
+</body>
 
-    <!-- Footer -->
-     <footer class="bg-black text-white py-16 border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">FO<span class="ember-subtle">F</span></h3>
-                    <p class="text-gray-400">Flames of Fire Church: Igniting passion for God and service to others in the heart of our community.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Visit Us</h4>
-                    <p class="text-gray-400 mb-2">797 , Clove Drive</p>
-                    <p class="text-gray-400 mb-2">Zakariyya Park, ext 4</p>
-                    <br>
-                    <p class="text-gray-400 mb-2">732 , Ramapulane Street</p>
-                    <p class="text-gray-400 mb-2">Mofolo South, Soweto</p>
-                    <br>
-                    <p class="text-gray-400 mb-2">660 , Ramaphosa Settlement</p>
-                    <p class="text-gray-400 mb-2">Rustervaal</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <p class="text-gray-400 mb-2">info@flamesoffire.co.za</p>
-                    <p class="text-gray-400 mb-2">(011) 859 1030</p>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="https://web.facebook.com/keflamesoffire?_rdc=1&_rdr#" class="text-white hover:text-gray-400">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
-                            </svg>
-                        </a>
-                       
-                        <a href="https://www.instagram.com/flamesoffire.ministries/" class="text-white hover:text-gray-400">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
-                            </svg>
-                        </a>
-                        <a href="https://www.youtube.com/@flamesoffireministriesfof6097" class="text-white hover:text-gray-400">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                            </svg>
-                        </a>
-                        <a href="https://www.tiktok.com/@fofministries?is_from_webapp=1&sender_device=pc" class="text-white hover:text-gray-400">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="text-gray-400 space-y-2">
-                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="index.html" class="hover:text-white transition">Community</a></li>
-                        <li><a href="index.html" class="hover:text-white transition">Services</a></li>
-                        <li><a href="index.html" class="hover:text-white transition">Events</a></li>
-                        <li><a href="index.html" class="hover:text-white transition">Sermons</a></li>
-                        <li><a href="index.html" class="hover:text-white transition">Books</a></li>
-                    </ul>
-            </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Flames of Fire. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const navHeight = document.querySelector('nav').offsetHeight;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96e8ebf251b64ece',t:'MTc1NTA5NTU0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
