@@ -264,20 +264,21 @@ nav a i {
 
 /* LEFT SIDE: Upcoming Event */
 .upcoming-event-card {
-    background-color: #fff;
+    background-color: #020246; /* Changed from #fff to brand blue */
     flex: 1;
     position: relative;
     padding: 40px;
-    padding-left: 80px;
+    padding-left: 110px;
     /* Make room for the date ribbon */
     min-height: 350px;
+    color: #fff; /* Ensuring text is white on dark background */
 }
 
 .ue-date-ribbon {
     position: absolute;
     left: -20px;
     top: 50px;
-    background-color: #020246;
+    background-color: #93913E; /* Changed to gold to contrast with blue card */
     color: #fff;
     width: 80px;
     padding: 15px 10px;
@@ -293,7 +294,7 @@ nav a i {
     right: 0;
     border-width: 15px 40px 0 40px;
     border-style: solid;
-    border-color: #020246 transparent transparent transparent;
+    border-color: #93913E transparent transparent transparent;
 }
 
 .ue-day {
@@ -324,7 +325,7 @@ nav a i {
 }
 
 .ue-title {
-    color: #020246;
+    color: #fff; /* White title for dark background */
     font-size: 18px;
     font-weight: 600;
 }
@@ -341,14 +342,14 @@ nav a i {
 }
 
 .ue-event-title {
-    color: #020246;
-    font-size: 20px;
+    color: #fff; /* White title for dark background */
+    font-size: 24px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .ue-meta {
-    color: #777;
+    color: #bbb; /* Light grey for accessibility */
     font-size: 13px;
     font-style: italic;
     margin-bottom: 10px;
@@ -358,7 +359,7 @@ nav a i {
 }
 
 .ue-meta span {
-    color: #020246;
+    color: #fff; /* Ensuring span text is visible */
     font-weight: 600;
 }
 
@@ -368,24 +369,26 @@ nav a i {
 }
 
 .ue-location i {
+    color: #93913E; /* Gold icon */
     margin-top: 5px;
 }
 
 .ue-btn {
     display: inline-block;
-    border: 1px solid #ccc;
-    color: #111;
+    border: 1px solid #fff;
+    color: #fff;
     text-decoration: none;
-    padding: 10px 25px;
+    padding: 12px 30px;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
     border-radius: 25px;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .ue-btn:hover {
-    background-color: #f5f5f5;
+    background-color: #fff;
+    color: #020246;
 }
 
 /* RIGHT SIDE: Latest Sermons */
@@ -514,22 +517,19 @@ nav a i {
 }
 
 .fellowship-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 1400px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto 0;
 }
 
 .card {
-    background-color: #f7f7f7;
-    border: 1px solid #eaeaea;
+    background-color: #020246; /* Changed from #f7f7f7 to blue */
+    border: 1px solid #93913E; /* Changed from #eaeaea to gold */
     border-radius: 12px;
-    padding: 40px 25px;
-    flex: 1;
-    min-width: 250px;
-    max-width: 300px;
+    padding: 30px 25px; /* Reduced padding slightly for "less info" look */
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -538,8 +538,25 @@ nav a i {
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: #93913E;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    color: #fff; /* Changed to white for dark background */
+}
+
+.card p {
+    color: #eee; /* Changed to light grey for dark background */
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-logo i {
+    font-size: 32px;
+    color: #93913E; /* Gold icons */
 }
 
 .card-logo {
@@ -551,13 +568,6 @@ nav a i {
     text-align: center;
 }
 
-.card p {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    flex-grow: 1;
-}
 
 .read-more {
     color: #93913E;
@@ -585,7 +595,7 @@ nav a i {
     animation: gradientFade 15s ease infinite;
     display: flex;
     justify-content: center;
-    padding: 60px 40px;
+    padding: 30px 40px; /* Reduced padding from 60px 40px */
 }
 
 @keyframes gradientFade {
@@ -603,11 +613,11 @@ nav a i {
 }
 
 .sr-image-wrapper {
-    max-width: 1000px;
+    max-width: 450px; /* Reduced from 1000px */
     width: 100%;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Slightly smaller shadow */
     border: 3px solid #93913E;
 }
 
@@ -1000,38 +1010,121 @@ nav a i {
         display: none;
     }
 
-    .action-buttons {
-        flex-wrap: wrap;
-        bottom: 20px;
+    .top-bar-placeholder {
+        display: none;
     }
 
-    .action-btn {
-        min-width: calc(50% - 15px);
+    header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
     }
 
     nav {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
     }
 
     .hero h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .hero h2 {
-        font-size: 36px;
+        font-size: 40px;
     }
 
     .hero {
-        min-height: 500px;
+        min-height: auto;
+        padding: 100px 20px;
+    }
+
+    .es-container {
+        flex-direction: column;
+    }
+
+    .upcoming-event-card, .latest-sermon-card {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .upcoming-event-card {
+        padding: 80px 20px 40px; /* Increased top padding to accommodate the ribbon */
+        width: 100%;
+        min-height: auto;
+    }
+
+    .ue-date-ribbon {
+        left: 20px;
+        top: -40px; /* Positioned above the card */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .main-heading {
+        font-size: 32px;
+    }
+
+    .fellowship-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .sib-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .sib-col {
+        width: 100%;
+    }
+
+    .scripture-readings-image {
+        padding: 20px;
+    }
+
+    .sr-image-wrapper {
+        max-width: 100%;
+    }
+
+    .book-feature-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .book-mockup {
+        transform: none !important;
+    }
+
+    .book-author-meta {
+        justify-content: center;
+    }
+
+    .branch-card-large {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .bc-info {
+        width: 100%;
+    }
+
+    .bc-meta {
+        margin-bottom: 30px;
     }
 }
 
 @media (max-width: 480px) {
-    .action-btn {
-        min-width: 100%;
-    }
-
     .hero-quote {
         font-size: 14px;
         padding: 0 15px;
@@ -1362,10 +1455,10 @@ nav a i {
 
 /* SERVICE INFO BAR */
 .service-info-bar {
-    background-color: #333333;
+    background-color: #020246;
     color: #fff;
-    padding: 60px 40px;
-    border-bottom: 1px solid #444;
+    padding: 80px 40px;
+    border-top: 1px solid #93913E; /* Adding a gold top border */
 }
 
 .sib-container {
@@ -1577,4 +1670,218 @@ nav a i {
     .footer-col {
         min-width: 100%;
     }
+}
+/* MODERN FEATURED EVENTS SECTION */
+.featured-events-section {
+    background-color: #fff; /* Updated to white background */
+    padding: 100px 40px;
+    color: #111; /* Dark text for light background */
+    text-align: center;
+}
+
+.events-header {
+    margin-bottom: 60px;
+}
+
+.upcoming-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(147, 145, 62, 0.2); /* Tint of gold */
+    border: 1px solid #93913E;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.upcoming-badge i {
+    font-size: 12px;
+    color: #93913E;
+}
+
+.featured-events-section .main-heading {
+    color: #020246; /* Blue heading from brand theme */
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.events-subtitle {
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.modern-events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-card-modern {
+    background: #020246;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: left;
+    border: 1px solid #93913E; /* Gold border from theme */
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.ecm-img-wrapper {
+    position: relative;
+    height: 250px;
+}
+
+.ecm-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.status-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #059669; /* Green from screenshot */
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.price-tag {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.ecm-content {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.ecm-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.ecm-desc {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.ecm-meta {
+    margin-bottom: 25px;
+}
+
+.ecm-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.ecm-meta-item i {
+    width: 16px;
+    color: #6366f1; /* Indigo from screenshot icons */
+}
+
+/* PROGRESS BAR STYLES */
+.progress-container {
+    margin-bottom: 30px;
+}
+
+.progress-bar-bg {
+    background: #30363d;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: #10b981; /* Green fill */
+    border-radius: 3px;
+}
+
+.ecm-footer {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-ecm {
+    flex: 1;
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+.btn-ecm:hover {
+    background: #4338ca;
+}
+
+.qty-control {
+    display: flex;
+    align-items: center;
+    background: #30363d;
+    border-radius: 12px;
+    padding: 0 10px;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.qty-input {
+    width: 30px;
+    text-align: center;
+    background: none;
+    border: none;
+    color: #fff;
+    font-weight: 600;
 }
