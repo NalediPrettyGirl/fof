@@ -205,14 +205,14 @@
                 }
 
                 grid.innerHTML = events.map(event => `
-                    <div class="bg-[#0a1631] premium-card rounded-2xl overflow-hidden border border-white/10 shadow-2xl flex flex-col group">
-                        <div class="relative overflow-hidden aspect-video">
+                    <div class="ticket-card mb-8 group">
+                        <div class="ticket-image relative overflow-hidden aspect-video md:aspect-auto md:h-full">
                             <img src="${event.image || 'Fof/9.jpg'}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="${event.title}">
                             <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold border border-white/10">${new Date(event.date).toLocaleDateString()}</div>
                         </div>
-                        <div class="p-8">
+                        <div class="p-8 flex-grow">
                             <h3 class="text-xl font-bold mb-4 uppercase tracking-wider">${event.title}</h3>
-                            <p class="text-gray-400 text-sm mb-6 leading-relaxed flex-grow">${event.description}</p>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">${event.description}</p>
                             <div class="flex items-center text-xs text-gray-500 font-bold uppercase tracking-widest">
                                 <i class="fas fa-map-marker-alt mr-2 ember"></i> ${event.venue || 'Various Venues'}
                             </div>
