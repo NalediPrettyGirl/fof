@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Responsibility - Flames of Fire</title>
+    <link rel="shortcut icon" href="Fof/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="bg-[#050a18] text-[#f1f5f9] overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#050a18] text-white z-50 border-b border-white/5 shadow-2xl">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a class="navbar-brand" href="index.html">
+                <img src="Fof/logo.png" class="h-12 w-auto" alt="Logo"></a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html"
+                    class="hover:text-ember transition font-bold text-sm lg:text-base tracking-wide">Home</a>
+                <a href="about.html"
+                    class="hover:text-ember transition font-bold text-sm lg:text-base tracking-wide">About</a>
+
+                <!-- Community Dropdown -->
+                <div class="nav-item-dropdown group">
+                    <a href="community.html"
+                        class="hover:text-ember transition font-bold text-sm lg:text-base flex items-center py-2 tracking-wide text-ember">
+                        Community
+                        <svg class="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu !bg-[#0a1631] shadow-2xl border-white/10">
+                        <a href="events.html" class="dropdown-item">Upcoming Events</a>
+                        <a href="youth.html" class="dropdown-item">Youth Ministry</a>
+                        <a href="sr.html" class="dropdown-item">Social Responsibility</a>
+                    </div>
+                </div>
+
+                <a href="index.html#donate"
+                    class="hover:text-ember transition font-bold text-sm lg:text-base tracking-wide">Give</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-[#050a18] fixed inset-x-0 top-[72px] border-b border-white/5 animate-slide-down max-h-[calc(100vh-72px)] overflow-y-auto">
+            <div class="container mx-auto px-4 py-8 flex flex-col space-y-4 text-center">
+                <a href="index.html"
+                    class="text-xl font-bold hover:text-ember transition py-2 border-b border-white/5">Home</a>
+                <a href="about.html"
+                    class="text-xl font-bold hover:text-ember transition py-2 border-b border-white/5">About Us</a>
+
+                <div class="py-2 border-b border-white/5">
+                    <span class="text-xl font-bold ember block mb-4">Our Community</span>
+                    <div class="flex flex-col space-y-4">
+                        <a href="events.html" class="text-lg hover:text-ember transition">Events</a>
+                        <a href="youth.html" class="text-lg hover:text-ember transition">Youth Ministry</a>
+                        <a href="sr.html" class="text-lg text-ember font-bold transition">Social Responsibility</a>
+                    </div>
+                </div>
+
+                <a href="index.html#donate" class="text-xl font-bold hover:text-ember transition py-2">Give</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-40 pb-20 bg-gradient-to-b from-[#0a1631] to-[#050a18] text-center relative overflow-hidden">
+        <div class="floating-orb w-64 h-64 -top-20 -right-20 opacity-20"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-5xl md:text-7xl font-light mb-6 tracking-tight uppercase">SOCIAL RESPONSIBILITY</h1>
+            <div class="ember-bg h-1 w-32 mx-auto mb-8 shadow-[0_0_20px_rgba(226,88,34,0.4)]"></div>
+            <p
+                class="text-xl text-gray-400 font-light max-w-2xl mx-auto uppercase tracking-widest text-[#f1f5f9] opacity-80">
+                Serving our neighborhood, building for the future.</p>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="py-24 bg-[#050a18]">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-20">
+                <h2 class="text-3xl font-light mb-8 uppercase tracking-widest">A HEART FOR THE PEOPLE</h2>
+                <div class="ember-bg h-1 w-24 mx-auto mb-8"></div>
+                <p class="text-gray-400 text-lg leading-relaxed font-medium">
+                    Our mission extends beyond the sanctuary walls. Through our Social Responsibility programs, we
+                    actively engage with our community to provide support, hope, and sustainable change.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="premium-card p-10 rounded-2xl border border-white/10 bg-[#0a1631]/50 group">
+                    <img src="Fof/10.jpg"
+                        class="w-full h-64 object-cover rounded-xl mb-8 group-hover:scale-105 transition duration-700"
+                        alt="Outreach">
+                </div>
+                <div class="premium-card p-10 rounded-2xl border border-white/10 bg-[#0a1631]/50 group">
+                    <img src="Fof/11.jpg"
+                        class="w-full h-64 object-cover rounded-xl mb-8 group-hover:scale-105 transition duration-700"
+                        alt="Building">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-24 border-t border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="Fof/logo.png" class="h-16 w-auto mb-8 mx-auto md:mx-0" alt="Logo">
+                    <p class="text-gray-600 text-sm font-medium leading-relaxed max-w-xs mx-auto md:mx-0">Dedicated to
+                        worship, community service, and spiritual excellence since 1999.</p>
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-gray-300">Visit Us</h4>
+                    <div class="text-gray-600 text-sm font-medium space-y-4">
+                        <div>
+                            <p>797, Clove Drive</p>
+                            <p>Zakariyya Park, ext 4</p>
+                        </div>
+                        <div>
+                            <p>732, Ramapulane Street</p>
+                            <p>Mofolo South, Soweto</p>
+                        </div>
+                        <div>
+                            <p>660, Ramaphosa Settlement</p>
+                            <p>Rustervaal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-gray-300">Contact</h4>
+                    <div class="text-gray-600 text-sm font-medium space-y-4">
+                        <p>info@flamesoffire.co.za</p>
+                        <p>(011) 859 1030</p>
+                    </div>
+                    <div class="flex space-x-6 mt-8 justify-center md:justify-start">
+                        <a href="https://web.facebook.com/keflamesoffire"
+                            class="text-gray-600 hover:text-ember transition"><i
+                                class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="https://www.instagram.com/flamesoffire.ministries/"
+                            class="text-gray-600 hover:text-ember transition"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-ember transition"><i
+                                class="fab fa-youtube fa-lg"></i></a>
+                        <a href="https://www.tiktok.com/@fofministries"
+                            class="text-gray-600 hover:text-ember transition"><i class="fab fa-tiktok fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="mt-20 pt-8 border-t border-white/5 text-center text-gray-800 text-[10px] uppercase font-bold tracking-[0.2em]">
+                &copy; 2026 Flames of Fire Ministries. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('mobile-menu-button')?.addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+        });
+    </script>
+</body>
+
+</html>

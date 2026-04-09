@@ -2,173 +2,234 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events | Flames of Fire Ministries</title>
-    <!-- Google Fonts: Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Events - Flames of Fire</title>
+    <link rel="shortcut icon" href="Fof/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body>
+<body class="bg-[#050a18] text-[#f1f5f9] overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#050a18] text-white z-50 border-b border-white/5 shadow-2xl">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a class="navbar-brand" href="index.html">
+                <img src="Fof/logo.png" class="h-12 w-auto" alt="Logo"></a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html"
+                    class="hover:text-ember transition font-bold text-sm lg:text-base tracking-wide">Home</a>
+                <a href="about.html"
+                    class="hover:text-ember transition font-bold text-sm lg:text-base tracking-wide">About</a>
 
-    <!-- TOP BAR -->
-    <div class="top-bar">
-        <div class="top-bar-placeholder"></div>
-        <div class="top-bar-text">
-            JOIN US EVERY SUNDAY AT 09:00
-        </div>
-        <div class="top-bar-social">
-            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
-            <a href="#" aria-label="Podcast"><i class="fa-solid fa-podcast"></i></a>
-        </div>
-    </div>
+                <!-- Community Dropdown -->
+                <div class="nav-item-dropdown group">
+                    <a href="community.html"
+                        class="hover:text-ember transition font-bold text-sm lg:text-base flex items-center py-2 tracking-wide text-ember">
+                        Community
+                        <svg class="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu !bg-[#0a1631] shadow-2xl border-white/10">
+                        <a href="events.html" class="dropdown-item"> Events</a>
+                        <a href="youth.html" class="dropdown-item">Youth Ministry</a>
+                        <a href="sr.html" class="dropdown-item">Social Responsibility</a>
+                    </div>
+                </div>
 
-    <!-- HEADER / NAVIGATION -->
-    <header>
-        <div class="logo-container" onclick="location.href='index.html'">
-            <img src="img/logo.png" alt="Flames of Fire Logo">
+                <a href="index.html#donate"
+                    class="hover:text-ember transition font-bold text-sm lg:text-base tracking-wide">Give</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
         </div>
 
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="events.html" class="active">EVENTS</a>
-            <a href="gallery.html">GALLERY</a>
-            <a href="sermons.html">RECENT SERMON</a>
-            <a href="give.html">GIVE</a>
-            <a href="branches.html">BRANCHES</a>
-        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-[#050a18] fixed inset-x-0 top-[72px] border-b border-white/5 animate-slide-down max-h-[calc(100vh-72px)] overflow-y-auto">
+            <div class="container mx-auto px-4 py-8 flex flex-col space-y-4 text-center">
+                <a href="index.html"
+                    class="text-xl font-bold hover:text-ember transition py-2 border-b border-white/5">Home</a>
+                <a href="about.html"
+                    class="text-xl font-bold hover:text-ember transition py-2 border-b border-white/5">About Us</a>
+
+                <div class="py-2 border-b border-white/5">
+                    <span class="text-xl font-bold ember block mb-4">Our Community</span>
+                    <div class="flex flex-col space-y-4">
+                        <a href="events.html" class="text-lg text-ember font-bold transition">Events</a>
+                        <a href="youth.html" class="text-lg hover:text-ember transition">Youth Ministry</a>
+                        <a href="sr.html" class="text-lg hover:text-ember transition">Social Responsibility</a>
+                    </div>
+                </div>
+
+                <a href="give.html" class="text-xl font-bold hover:text-ember transition py-2">Give</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-40 pb-20 bg-gradient-to-b from-[#0a1631] to-[#050a18] text-center relative overflow-hidden">
+        <div class="floating-orb w-64 h-64 -top-20 -right-20 opacity-20"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-5xl md:text-7xl font-light mb-6 tracking-tight uppercase">UPCOMING EVENTS</h1>
+            <div class="ember-bg h-1 w-32 mx-auto mb-8 shadow-[0_0_20px_rgba(226,88,34,0.4)]"></div>
+            <p
+                class="text-xl text-gray-400 font-light max-w-2xl mx-auto uppercase tracking-widest text-[#f1f5f9] opacity-80">
+                Join us in fellowship, worship, and community growth.</p>
+        </div>
     </header>
 
-    <!-- PAGE HERO -->
-    <section class="page-hero events-hero">
-        <div class="hero-content">
-            <h4 class="sub-heading" style="color: #fff;">GET CONNECTED</h4>
-            <h1>Upcoming Events</h1>
-        </div>
-    </section>
-
-    <!-- MODERN FEATURED EVENTS SECTION -->
-    <section class="featured-events-section">
-        <div class="events-header"> 
-            <h2 class="main-heading">Featured Events</h2>
-            <p class="events-subtitle">Browse our upcoming events and register today. Free and paid events available.</p>
-        </div>
-
-        <div class="modern-events-grid">
-            <!-- Event 1: Parking Friday -->
-            <div class="event-card-modern">
-                <div class="ecm-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&q=80&w=800"
-                        alt="Good Friday Parking">
-                    <div class="price-tag">R 10,00</div>
-                </div>
-                <div class="ecm-content">
-                    <h3 class="ecm-title">Parking Friday - Good Friday Celebration</h3>
-                    <p class="ecm-desc">Parking tickets for Good Friday Celebration at Orlando Stadium.</p>
-
-                    <div class="ecm-meta">
-                        <div class="ecm-meta-item">
-                            <i class="fa-regular fa-calendar"></i>
-                            Friday, 03 April 2026 at 08:00
-                        </div>
-                        <div class="ecm-meta-item">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Dedicated Parking Areas
-                        </div>
-                    </div>
-                </div>
+    <!-- Events Section -->
+    <section class="py-24 bg-[#050a18]">
+        <div class="container mx-auto px-4">
+            <div id="events-loader" class="text-center py-12">
+                <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-ember"></div>
+                <p class="mt-4 text-gray-400 font-medium uppercase text-xs tracking-widest">Loading Blessed Occasions...
+                </p>
             </div>
 
-            <!-- Event 2: Good Friday Celebration -->
-            <div class="event-card-modern">
-                <div class="ecm-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=800"
-                        alt="Good Friday Celebration">
-                    <div class="price-tag">R 10,00</div>
-                </div>
-                <div class="ecm-content">
-                    <h3 class="ecm-title">Good Friday Celebration (Friday)</h3>
-                    <p class="ecm-desc">Join Grace Bible Church at Orlando Stadium for a powerful Good Friday
-                        celebration as we...</p>
-
-                    <div class="ecm-meta">
-                        <div class="ecm-meta-item">
-                            <i class="fa-regular fa-calendar"></i>
-                            Friday, 03 April 2026 at 10:00
-                        </div>
-                        <div class="ecm-meta-item">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Orlando Stadium, Soweto
-                        </div>
-                    </div>
-                </div>
+            <div id="events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Events will be populated by JS -->
             </div>
 
-            <!-- Event 3: Parking Saturday -->
-            <div class="event-card-modern">
-                <div class="ecm-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800"
-                        alt="Saturday Parking">
-                    <div class="price-tag">R 10,00</div>
-                </div>
-                <div class="ecm-content">
-                    <h3 class="ecm-title">Parking Saturday - Good Friday Celebration</h3>
-                    <p class="ecm-desc">Parking tickets for Good Friday Celebration at Orlando Stadium.</p>
-
-                    <div class="ecm-meta">
-                        <div class="ecm-meta-item">
-                            <i class="fa-regular fa-calendar"></i>
-                            Saturday, 4 April 2026 at 10:00
-                        </div>
-                        <div class="ecm-meta-item">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Dedicated Parking Areas
-                        </div>
-                    </div>
-                </div>
+            <div id="no-events" class="hidden text-center py-24">
+                <p class="text-gray-500 text-xl font-light">Stay tuned for upcoming spiritual gatherings.</p>
             </div>
         </div>
     </section>
 
-    <!-- SERVICE INFO BAR -->
-    <section class="service-info-bar">
-        <div class="sib-container">
-            <div class="sib-col">
-                <h3>Service Times</h3>
-                <p><strong>Sundays</strong></p>
-                <p>09:00</p>
-            </div>
-            <div class="sib-col">
-                <h3>Contact Info</h3>
-                <p>+27 11 859 1030</p>
-                <p>info@flamesoffire.co.za</p>
-            </div>
-            <div class="sib-col">
-                <h3>Follow Us</h3>
-                <div class="sib-social">
-                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
-                    <a href="#" aria-label="Podcast"><i class="fa-solid fa-podcast"></i></a>
+    <!-- Gallery Preview (Pictures and all) -->
+    <section class="py-24 bg-[#0a1631] border-y border-white/5">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-light mb-16 uppercase tracking-[0.2em]">EVENT HIGHLIGHTS</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="aspect-square rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
+                    <img src="Fof/1.jpeg"
+                        class="w-full h-full object-cover group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
+                        alt="Event 1">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
+                    <img src="Fof/3.jpg"
+                        class="w-full h-full object-cover group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
+                        alt="Event 2">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
+                    <img src="Fof/5.jpg"
+                        class="w-full h-full object-cover group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
+                        alt="Event 3">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-white/5 shadow-2xl group">
+                    <img src="Fof/10.jpg"
+                        class="w-full h-full object-cover group-hover:scale-110 transition duration-700 brightness-75 group-hover:brightness-100"
+                        alt="Event 4">
                 </div>
             </div>
+
         </div>
     </section>
-    <a href="#" id="scroll-to-top" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></a>
-    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-24 border-t border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="Fof/logo.png" class="h-16 w-auto mb-8 mx-auto md:mx-0" alt="Logo">
+                    <p class="text-gray-600 text-sm font-medium leading-relaxed max-w-xs mx-auto md:mx-0">Dedicated to
+                        worship, community service, and spiritual excellence since 1999.</p>
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-gray-300">Visit Us</h4>
+                    <div class="text-gray-600 text-sm font-medium space-y-4">
+                        <div>
+                            <p>797, Clove Drive</p>
+                            <p>Zakariyya Park, ext 4</p>
+                        </div>
+                        <div>
+                            <p>732, Ramapulane Street</p>
+                            <p>Mofolo South, Soweto</p>
+                        </div>
+                        <div>
+                            <p>660, Ramaphosa Settlement</p>
+                            <p>Rustervaal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-gray-300">Contact</h4>
+                    <div class="text-gray-600 text-sm font-medium space-y-4">
+                        <p>info@flamesoffire.co.za</p>
+                        <p>(011) 859 1030</p>
+                    </div>
+                    <div class="flex space-x-6 mt-8 justify-center md:justify-start">
+                        <a href="https://web.facebook.com/keflamesoffire"
+                            class="text-gray-600 hover:text-ember transition"><i
+                                class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="https://www.instagram.com/flamesoffire.ministries/"
+                            class="text-gray-600 hover:text-ember transition"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-ember transition"><i
+                                class="fab fa-youtube fa-lg"></i></a>
+                        <a href="https://www.tiktok.com/@fofministries"
+                            class="text-gray-600 hover:text-ember transition"><i class="fab fa-tiktok fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="mt-20 pt-8 border-t border-white/5 text-center text-gray-800 text-[10px] uppercase font-bold tracking-[0.2em]">
+                &copy; 2026 Flames of Fire Ministries. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        const API_BASE = "https://fof-website-upgrade-api.onrender.com/";
+
+        async function fetchEvents() {
+            try {
+                const res = await fetch(`${API_BASE}events`);
+                const events = await res.json();
+                const grid = document.getElementById('events-grid');
+                document.getElementById('events-loader').classList.add('hidden');
+
+                if (events.length === 0) {
+                    document.getElementById('no-events').classList.remove('hidden');
+                    return;
+                }
+
+                grid.innerHTML = events.map(event => `
+                    <div class="bg-[#0a1631] premium-card rounded-2xl overflow-hidden border border-white/10 shadow-2xl flex flex-col group">
+                        <div class="relative overflow-hidden aspect-video">
+                            <img src="${event.image || 'Fof/9.jpg'}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="${event.title}">
+                            <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold border border-white/10">${new Date(event.date).toLocaleDateString()}</div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold mb-4 uppercase tracking-wider">${event.title}</h3>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed flex-grow">${event.description}</p>
+                            <div class="flex items-center text-xs text-gray-500 font-bold uppercase tracking-widest">
+                                <i class="fas fa-map-marker-alt mr-2 ember"></i> ${event.venue || 'Various Venues'}
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (err) {
+                console.error("Fetch Events Error:", err);
+                document.getElementById('events-loader').innerHTML = `<p class="text-red-500 uppercase text-xs tracking-widest">Error Connection to Sanctuary</p>`;
+            }
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            fetchEvents();
+            document.getElementById('mobile-menu-button')?.addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+        });
+    </script>
 </body>
 
 </html>
