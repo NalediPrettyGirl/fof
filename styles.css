@@ -10,7 +10,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     color: #f1f5f9; /* Softened white to prevent vibration */
-    background-color: #050a18; /* Deep Midnight Navy, less vibrating */
+    background-color: #1a2d4d; /* Deep Midnight Navy, less vibrating */
     line-height: 1.7; /* Increased line height for breathing room */
 }
 
@@ -31,19 +31,21 @@ h1, h2, h3, h4, h5 {
 /* Common Containers */
 .premium-card {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    background: #0a1631; /* Stable deep navy */
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #1a2d4d;
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Updated subtle border */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .ticket-card {
-    background: #0a1631;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #1a2d4d;
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Updated subtle border */
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 768px) {
@@ -63,7 +65,7 @@ h1, h2, h3, h4, h5 {
     position: absolute;
     width: 20px;
     height: 20px;
-    background: #050a18;
+    background: #1a2d4d;
     border-radius: 50%;
     z-index: 5;
 }
@@ -205,19 +207,22 @@ h1, h2, h3, h4, h5 {
 
 /* Faith Statements */
 .faith-statement {
-    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+    background: #1a2d4d;
     border-left: 4px solid var(--ember);
     padding: 2rem;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 .faith-statement:hover {
     transform: translateX(10px);
+    border-color: var(--ember);
 }
 
 /* Background Gradients */
 .bg-dark-gradient {
-    background: linear-gradient(135deg, #050a12 0%, #0d1b2a 100%);
+    background: linear-gradient(135deg, #1a2d4d 0%, #0d1b2a 100%);
 }
 
 .floating-orb {

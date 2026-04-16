@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body class="bg-[#050a18] text-[#f1f5f9] overflow-x-hidden">
+<body class="bg-[#1a2d4d] text-[#f1f5f9] overflow-x-hidden">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-[#050a18] text-white z-50 border-b border-white/5 shadow-2xl">
+    <nav class="fixed w-full bg-[#1a2d4d] text-white z-50 border-b border-white/5 shadow-2xl">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a class="navbar-brand" href="index.html">
                 <img src="Fof/logo.png" class="h-12 w-auto" alt="Logo"></a>
@@ -36,7 +36,7 @@
                             </path>
                         </svg>
                     </a>
-                    <div class="dropdown-menu !bg-[#0a1631] shadow-2xl border-white/10">
+                    <div class="dropdown-menu !bg-[#1a2d4d] shadow-2xl border-white/10">
                         <a href="events.html" class="dropdown-item"> Events</a>
                         <a href="youth.html" class="dropdown-item">Youth Ministry</a>
                         <a href="sr.html" class="dropdown-item">Social Responsibility</a>
@@ -56,7 +56,7 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden md:hidden bg-[#050a18] fixed inset-x-0 top-[72px] border-b border-white/5 animate-slide-down max-h-[calc(100vh-72px)] overflow-y-auto">
+            class="hidden md:hidden bg-[#1a2d4d] fixed inset-x-0 top-[72px] border-b border-white/5 animate-slide-down max-h-[calc(100vh-72px)] overflow-y-auto">
             <div class="container mx-auto px-4 py-8 flex flex-col space-y-4 text-center">
                 <a href="index.html"
                     class="text-xl font-bold hover:text-ember transition py-2 border-b border-white/5">Home</a>
@@ -78,7 +78,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="pt-40 pb-20 bg-gradient-to-b from-[#0a1631] to-[#050a18] text-center relative overflow-hidden">
+    <header class="pt-40 pb-20 bg-gradient-to-b from-[#1a2d4d] to-[#1a2d4d] text-center relative overflow-hidden">
         <div class="floating-orb w-64 h-64 -top-20 -right-20 opacity-20"></div>
         <div class="container mx-auto px-4 relative z-10">
             <h1 class="text-5xl md:text-7xl font-light mb-6 tracking-tight uppercase">UPCOMING EVENTS</h1>
@@ -90,16 +90,62 @@
     </header>
 
     <!-- Events Section -->
-    <section class="py-24 bg-[#050a18]">
+    <section class="py-24 bg-[#1a2d4d]">
         <div class="container mx-auto px-4">
-            <div id="events-loader" class="text-center py-12">
-                <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-ember"></div>
-                <p class="mt-4 text-gray-400 font-medium uppercase text-xs tracking-widest">Loading Blessed Occasions...
-                </p>
-            </div>
-
             <div id="events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Events will be populated by JS -->
+                <!-- Mock Event 1: Fire Conference -->
+                <div class="ticket-card mb-8 group premium-card shadow-2xl">
+                    <div class="ticket-image relative overflow-hidden aspect-video md:aspect-auto md:h-full">
+                        <img src="Fof/9.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Fire Conference">
+                        <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full text-xs uppercase tracking-[0.2em] font-bold border border-white/10">24 MAY 2026</div>
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-0.5 bg-ember/10 text-white text-[9px] uppercase font-black tracking-tighter rounded-full border border-ember/20">Major Gathering</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wider group-hover:text-ember transition">Annual Fire Conference</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Three days of intense worship and prophetic revelation. Join us as we gather to be ignited for the next season of ministry.</p>
+                        <div class="flex items-center text-[10px] text-gray-500 font-bold uppercase tracking-widest">
+                            <i class="fas fa-map-marker-alt mr-2 text-ember"></i> Main Sanctuary, Soweto
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mock Event 2: Youth Night -->
+                <div class="ticket-card mb-8 group premium-card shadow-2xl">
+                    <div class="ticket-image relative overflow-hidden aspect-video md:aspect-auto md:h-full">
+                        <img src="Fof/4.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Youth Night">
+                        <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full text-xs uppercase tracking-[0.2em] font-bold border border-white/10">12 JUNE 2026</div>
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-0.5 bg-cyan-500/10 text-white text-[9px] uppercase font-black tracking-tighter rounded-full border border-cyan-500/20">Generation Now</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wider group-hover:text-ember transition">Ignite Youth Explosion</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">A night dedicated to the youth. Featuring live music, creative arts, and a message that speaks to this generation.</p>
+                        <div class="flex items-center text-[10px] text-gray-500 font-bold uppercase tracking-widest">
+                            <i class="fas fa-map-marker-alt mr-2 text-ember"></i> Community Hall
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mock Event 3: Couples Seminar -->
+                <div class="ticket-card mb-8 group premium-card shadow-2xl">
+                    <div class="ticket-image relative overflow-hidden aspect-video md:aspect-auto md:h-full">
+                        <img src="Fof/10.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Couples Seminar">
+                        <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full text-xs uppercase tracking-[0.2em] font-bold border border-white/10">05 JULY 2026</div>
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-0.5 bg-purple-500/10 text-white text-[9px] uppercase font-black tracking-tighter rounded-full border border-purple-500/20">Family Life</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wider group-hover:text-ember transition">Covenant Love Seminar</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Building strong, Christ-centered marriages. A weekend of teaching and rekindling the flame of love.</p>
+                        <div class="flex items-center text-[10px] text-gray-500 font-bold uppercase tracking-widest">
+                            <i class="fas fa-map-marker-alt mr-2 text-ember"></i> Zakariyya Park Branch
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="no-events" class="hidden text-center py-24">
@@ -109,7 +155,7 @@
     </section>
 
     <!-- Gallery Preview (Pictures and all) -->
-    <section class="py-24 bg-[#0a1631] border-y border-white/5">
+    <section class="py-24 bg-[#1a2d4d] border-y border-white/5">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-light mb-16 uppercase tracking-[0.2em]">EVENT HIGHLIGHTS</h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -226,7 +272,7 @@
         }
 
         window.addEventListener("DOMContentLoaded", () => {
-            fetchEvents();
+            // fetchEvents(); // Disconnected for now
             document.getElementById('mobile-menu-button')?.addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
         });
     </script>
