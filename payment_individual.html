@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Now - Flames of Fire Ministries</title>
+    <link rel="shortcut icon" href="Fof/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .ember-glow {
+            box-shadow: 0 0 20px rgba(226, 88, 34, 0.15);
+        }
+
+        input::placeholder {
+            color: #4b5563;
+        }
+
+        .form-input {
+            background-color: rgba(26, 45, 77, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .form-input:focus {
+            border-color: #E25822;
+            outline: none;
+            box-shadow: 0 0 10px rgba(226, 88, 34, 0.2);
+        }
+
+        .bg-fof-navy {
+            background-color: #1a2d4d;
+        }
+    </style>
+</head>
+
+<body class="bg-fof-navy text-white font-sans overflow-x-hidden">
+    <!-- Header removed for individual view -->
+
+    <!-- Main Content -->
+    <main class="min-h-screen flex items-center justify-center relative py-12 px-4">
+        <!-- Background with high-end feel -->
+        <div class="absolute inset-0 z-0">
+            <img src="Fof/6.jpg" class="w-full h-full object-cover opacity-20 brightness-50">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1a2d4d] via-[#1a2d4d]/60 to-[#1a2d4d]"></div>
+        </div>
+
+        <div class="container max-w-2xl mx-auto relative z-10 text-center">
+            <!-- Header Section -->
+            <div class="mb-12 animate-fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-serif text-white tracking-tight mb-6">GIVING</h1>
+            </div>
+
+            <!-- Giving Card -->
+            <div
+                class="bg-[#1a2d4d]/80 p-8 md:p-12 rounded-[2.5rem] border border-white/10 shadow-2xl relative ember-glow backdrop-blur-sm premium-card">
+                <!-- PayFast Form -->
+                <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post"
+                    id="payfast-form" class="space-y-4">
+                    <!-- Required PayFast Fields -->
+                    <input type="hidden" name="cmd" value="_paynow">
+                    <input type="hidden" name="receiver" value="23522210">
+                    <input type="hidden" name="item_name" value="General Offering" id="itemName">
+                    <input type="hidden" name="return_url" value="https://flamesoffire.co.za/success">
+                    <input type="hidden" name="cancel_url" value="https://flamesoffire.co.za/give">
+
+                    <!-- Amount Input -->
+                    <div class="relative">
+                        <input required type="number" step="0.01" name="amount" id="PayFastAmount"
+                            placeholder="Enter amount (ZAR)"
+                            class="w-full form-input py-4 px-6 rounded-2xl text-lg text-white font-medium">
+                    </div>
+
+                    <!-- Purpose Selection -->
+                    <div class="relative">
+                        <select id="purpose-select" required
+                            class="w-full form-input py-4 px-6 rounded-2xl text-white appearance-none cursor-pointer">
+                            <option value="" disabled selected>Select Purpose</option>
+                            <option value="Offering">General Offering</option>
+                            <option value="Tithe">Tithe</option>
+                            <option value="Missions">Missions</option>
+                            <option value="Building Fund">Building Fund</option>
+                            <option value="Thanksgiving">Thanksgiving</option>
+                        </select>
+                        <div class="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none opacity-50">
+                            <i class="fas fa-hand-holding-heart text-sm"></i>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                        class="w-full bg-ember hover:bg-ember-dark text-white font-extrabold py-5 rounded-2xl text-lg transition duration-300 transform hover:scale-[1.02] shadow-xl uppercase tracking-widest">
+                        Give Now
+                    </button>
+                </form>
+
+                <p
+                    class="mt-8 text-[10px] text-gray-500 font-bold uppercase tracking-widest flex items-center justify-center">
+                    <i class="fas fa-lock mr-2 text-green-600"></i> Secure Payment Gateway
+                </p>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <script>
+        const form = document.getElementById('payfast-form');
+        const purposeSelect = document.getElementById('purpose-select');
+        const itemNameInput = document.getElementById('itemName');
+        // Purpose Selection script (Mobile menu logic removed as nav is gone)
+        const tiles = document.querySelectorAll('.purpose-tile');
+        const selectionText = document.getElementById('selected-purpose-text');
+
+        tiles.forEach(tile => {
+            tile.addEventListener('click', () => {
+                // Remove active classes
+                tiles.forEach(t => t.classList.remove('border-ember', 'bg-ember/10'));
+
+                // Add active state
+                tile.classList.add('border-ember', 'bg-ember/10');
+
+                const purpose = tile.getAttribute('data-purpose');
+                itemNameInput.value = purpose;
+                selectionText.innerText = `Currently selecting: ${purpose}`;
+                selectionText.classList.add('text-ember');
+
+                // Scroll back to form slightly for focus
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        // Add fading animation to header on load
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.animate-fade-in-up')?.classList.add('translate-y-0', 'opacity-100');
+        });
+    </script>
+</body>
+
+</html>
