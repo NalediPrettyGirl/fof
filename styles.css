@@ -2,6 +2,7 @@
 :root {
     --ember: #E25822;
     --ember-dark: #c45124;
+    --ember-light: #c45124; /* Vibrant light orange */
     --charcoal: #111;
     --cream: #f4f4f4;
 }
@@ -9,43 +10,72 @@
 body {
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
-    color: #f1f5f9; /* Softened white to prevent vibration */
-    background-color: #1a2d4d; /* Deep Midnight Navy, less vibrating */
-    line-height: 1.7; /* Increased line height for breathing room */
+    color: #f1f5f9;
+    /* Softened white to prevent vibration */
+    background-color: #1a2d4d;
+    /* Deep Midnight Navy, less vibrating */
+    line-height: 1.7;
+    /* Increased line height for breathing room */
 }
 
 p {
     text-align: justify;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Cormorant Garamond', serif;
 }
 
-.ember { color: var(--ember); }
-.ember-dark { color: var(--ember-dark); }
-.ember-bg { background-color: var(--ember); }
-.ember-bg-subtle { background-color: var(--ember-dark); }
-.ember-border { border-color: var(--ember); }
+.ember {
+    color: var(--ember);
+}
+
+.ember-dark {
+    color: var(--ember-dark);
+}
+
+.ember-bg {
+    background-color: var(--ember);
+}
+
+.ember-bg-subtle {
+    background-color: var(--ember-dark);
+}
+
+.ember-border {
+    border-color: var(--ember);
+}
+
+.hover-ember-light:hover {
+    background-color: var(--ember-light) !important;
+    border-color: var(--ember-light) !important;
+    color: white !important;
+}
 
 /* Common Containers */
 .premium-card {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    background: #1a2d4d;
-    border: 1px solid rgba(255, 255, 255, 0.08); /* Updated subtle border */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.05);
+    /* Unified luminous light navy */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
 }
 
 .ticket-card {
-    background: #1a2d4d;
-    border: 1px solid rgba(255, 255, 255, 0.08); /* Updated subtle border */
+    background: #1e3a5f;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 768px) {
@@ -53,6 +83,7 @@ h1, h2, h3, h4, h5 {
         flex-direction: row;
         align-items: center;
     }
+
     .ticket-image {
         width: 250px;
         height: 100%;
@@ -60,7 +91,8 @@ h1, h2, h3, h4, h5 {
     }
 }
 
-.ticket-card::before, .ticket-card::after {
+.ticket-card::before,
+.ticket-card::after {
     content: '';
     position: absolute;
     width: 20px;
@@ -76,6 +108,7 @@ h1, h2, h3, h4, h5 {
         top: -10px;
         left: 240px;
     }
+
     .ticket-card::after {
         bottom: -10px;
         left: 240px;
@@ -88,6 +121,7 @@ h1, h2, h3, h4, h5 {
         top: 150px;
         left: -10px;
     }
+
     .ticket-card::after {
         top: 150px;
         right: -10px;
@@ -121,7 +155,8 @@ h1, h2, h3, h4, h5 {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.5);
+    /* Lighter overlay */
     z-index: 1;
 }
 
@@ -159,8 +194,13 @@ h1, h2, h3, h4, h5 {
 
 /* Ticker Animation */
 @keyframes ticker {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .ticker-container {
@@ -215,6 +255,7 @@ h1, h2, h3, h4, h5 {
     border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
+
 .faith-statement:hover {
     transform: translateX(10px);
     border-color: var(--ember);
@@ -244,15 +285,35 @@ h1, h2, h3, h4, h5 {
 
 /* Global Responsive Refinements */
 @media (max-width: 640px) {
-    h1 { font-size: 2.5rem !important; }
-    h2 { font-size: 2rem !important; }
-    .container { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
-    .py-24 { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+    h1 {
+        font-size: 2.5rem !important;
+    }
+
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    .container {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .py-24 {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
 }
 
 @keyframes slide-down {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-slide-down {

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offering - Flames of Fire Ministries</title>
+    <link rel="shortcut icon" href="Fof/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ember': '#c85a2a',
+                        'ember-dark': '#a84820',
+                        'fof-navy': '#14253f',
+                        'fof-navy-light': '#1e3358',
+                    },
+                    fontFamily: {
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .ember-glow {
+            box-shadow: 0 0 20px rgba(200, 90, 42, 0.15);
+        }
+
+        input::placeholder {
+            color: #8a96ac;
+        }
+
+        .form-input {
+            background-color: #3d5a8d;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus {
+            border-color: #c85a2a;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(200, 90, 42, 0.15);
+            background-color: #48679f;
+        }
+
+        .bg-fof-navy {
+            background-color: #14253f;
+        }
+
+        /* Card background — defined as real CSS (not Tailwind arbitrary value)
+           to guarantee it renders on mobile browsers that choke on JIT classes */
+        .giving-card {
+            background-color: #2a4370;
+        }
+
+        .bg-ember {
+            background-color: #c85a2a;
+        }
+
+        .bg-ember:hover,
+        .hover\:bg-ember-dark:hover {
+            background-color: #a84820;
+        }
+
+        /* Field label */
+        .field-label {
+            display: block;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.65);
+            margin-bottom: 8px;
+        }
+
+        /* Currency prefix inside amount input */
+        .currency-prefix {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #8a96ac;
+            font-size: 18px;
+            font-weight: 500;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Push the amount text over so it doesn't collide with the R prefix */
+        .amount-input {
+            padding-left: 40px !important;
+        }
+
+        /* Dropdown chevron animation */
+        .select-chevron {
+            transition: transform 0.2s ease;
+        }
+
+        select:focus+.select-chevron {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        /* Each field group (label + input) */
+        .field-group {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body class="bg-fof-navy text-white font-sans overflow-x-hidden">
+    <!-- Header removed for individual view -->
+
+    <!-- Main Content -->
+    <main class="min-h-screen flex items-center justify-center relative py-12 px-4">
+        <!-- Background with high-end feel -->
+        <div class="absolute inset-0 z-0">
+            <img src="Fof/6.jpg" class="w-full h-full object-cover opacity-20 brightness-50">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#14253f] via-[#14253f]/60 to-[#14253f]"></div>
+        </div>
+
+        <div class="container max-w-2xl mx-auto relative z-10 text-center">
+            <!-- Header Section -->
+            <div class="mb-12 animate-fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-sans text-white tracking-tight mb-6">OFFERING</h1>
+            </div>
+
+            <!-- Giving Card -->
+            <div
+                class="giving-card p-8 md:p-12 rounded-[2.3rem] border border-white/10 shadow-2xl relative ember-glow premium-card">
+                <!-- PayFast Form -->
+                <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post"
+                    id="payfast-form" class="space-y-5">
+                    <!-- Required PayFast Fields -->
+                    <input type="hidden" name="cmd" value="_paynow">
+                    <input type="hidden" name="receiver" value="23522210">
+                    <input type="hidden" name="item_name" value="Offering" id="itemName">
+                    <input type="hidden" name="return_url" value="https://flamesoffire.co.za/success">
+                    <input type="hidden" name="cancel_url" value="https://flamesoffire.co.za/give">
+
+                    <!-- Amount Input -->
+                    <div class="field-group">
+                        <label for="PayFastAmount" class="field-label">Amount</label>
+                        <div class="relative">
+                            <span class="currency-prefix">R</span>
+                            <input required type="number" step="0.01" name="amount" id="PayFastAmount" min="5.00"
+                                placeholder="0.00" value=""
+                                class="w-full form-input amount-input py-4 px-6 rounded-lg text-lg text-white font-medium">
+                        </div>
+                    </div>
+
+                    <!-- Purpose Selection -->
+                    <div class="field-group">
+                        <label for="purpose-select" class="field-label">Purpose</label>
+                        <div class="relative">
+                            <select id="purpose-select" required
+                                class="w-full form-input py-4 px-6 rounded-lg text-white appearance-none cursor-pointer pr-14">
+                                <option value="" disabled selected class="bg-fof-navy">Select purpose</option>
+                                <option value="Offering" class="bg-fof-navy">Offering</option>
+                                <option value="Tithe" class="bg-fof-navy">Tithe</option>
+                                <option value="Building Fund" class="bg-fof-navy">Building Fund</option>
+                            </select>
+                            <i
+                                class="fas fa-chevron-down select-chevron absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-ember"></i>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                        class="w-full bg-ember hover:bg-ember-dark text-white font-extrabold py-5 rounded-lg text-lg transition duration-300 transform hover:scale-[1.02] shadow-xl uppercase tracking-widest mt-2">
+                        Submit Offering
+                    </button>
+                </form>
+
+                <p
+                    class="mt-8 text-[10px] text-gray-400 font-bold uppercase tracking-widest flex items-center justify-center">
+                    <i class="fas fa-lock mr-2 text-ember"></i> Secure Payment Gateway
+                </p>
+            </div>
+
+            <!-- Fundraising Section -->
+            <div class="mt-32 pt-24 pb-12 relative fade-in">
+
+
+                <div class="relative z-10 text-white">
+                    <div class="text-center mb-16">
+                        <h4 class="text-xl md:text-2xl mb-4 uppercase tracking-[0.3em] text-ember">Make a Difference
+                        </h4>
+                        <h2 class="text-3xl md:text-5xl lg:text-6xl mb-12 uppercase tracking-[0.1em] text-white">Help Us
+                            Build the
+                            Future</h2>
+
+                        <div
+                            class="max-w-3xl mx-auto bg-white/5 p-8 md:p-10 rounded-2xl border border-white/5 shadow-2xl mb-12 backdrop-blur-sm">
+                            <p class="text-lg italic text-white mb-4 leading-relaxed">"Unless the Lord builds the house,
+                                the builders
+                                labor in vain."</p>
+                            <p class="text-white font-bold tracking-widest uppercase text-xs">— Psalm 127:1</p>
+                        </div>
+
+                        <!-- Building Initiative Gallery -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 px-4 md:px-0">
+                            <div
+                                class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group fade-in-up">
+                                <img src="Fof/11.jpg"
+                                    class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
+                            </div>
+                            <div
+                                class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group mt-8 md:mt-16 fade-in-up delay-100">
+                                <img src="Fof/12.jpg"
+                                    class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
+                            </div>
+                            <div
+                                class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group fade-in-up delay-200">
+                                <img src="Fof/15.jpg"
+                                    class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
+                            <div
+                                class="p-12 rounded-3xl border border-white/20 shadow-2xl premium-card transition duration-500 overflow-hidden relative fade-in-left">
+                                <h4 class="text-xs font-bold mb-6 uppercase tracking-[0.5em] text-white">Partnership
+                                </h4>
+                                <p class="text-white text-base font-medium leading-relaxed mb-8">Join our circle of
+                                    covenant partners
+                                    and contribute monthly to the growth of the ministry and the temple project.</p>
+                                <i class="fas fa-handshake text-3xl opacity-20 hover:opacity-40 transition"></i>
+                            </div>
+
+                            <div
+                                class="p-12 rounded-3xl border border-white/20 shadow-2xl premium-card transition duration-500 overflow-hidden relative fade-in-right">
+                                <h4 class="text-xs font-bold mb-6 uppercase tracking-[0.5em] text-white">Merchandise
+                                </h4>
+                                <p class="text-white text-base font-medium leading-relaxed mb-8">Support us by
+                                    purchasing limited
+                                    edition FOF helmets, T-shirts, and caps. All proceeds go directly to the building
+                                    fund.</p>
+                                <i class="fas fa-tshirt text-3xl opacity-20 hover:opacity-40 transition"></i>
+                            </div>
+                        </div>
+
+                        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+                            class="bg-white/5 hover:bg-ember hover:border-ember border border-white/20 py-4 rounded-sm shadow-xl inline-block px-10 transition-all duration-500 group cursor-pointer uppercase font-bold tracking-[0.3em] text-white text-base hover:scale-105 active:scale-95">
+                            OFFER
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+      <!-- Footer -->
+    <footer class="bg-black text-white py-24 border-t border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="Fof/logo.png" class="h-16 w-auto mb-8 mx-auto md:mx-0" alt="Logo">
+                    <p class="text-white text-sm font-medium leading-relaxed max-w-xs mx-auto md:mx-0">Dedicated to
+                        worship, community service, and spiritual excellence since 1999.</p>
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Visit Us</h4>
+                    <div class="text-white text-sm font-medium space-y-4">
+                        <div>
+                            <p>797, Clove Drive</p>
+                            <p>Zakariyya Park, ext 4</p>
+                        </div>
+                        <div>
+                            <p>732, Ramapulane Street</p>
+                            <p>Mofolo South, Soweto</p>
+                        </div>
+                        <div>
+                            <p>660, Ramaphosa Settlement</p>
+                            <p>Rustervaal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Contact</h4>
+                    <div class="text-white text-sm font-medium space-y-4">
+                        <p>info@flamesoffire.co.za</p>
+                        <p>(011) 859 1030</p>
+                    </div>
+                    <br>
+                   <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Follow Us</h4>
+                    <div class="flex space-x-6 mt-8 justify-center md:justify-start">
+                        <a href="https://web.facebook.com/keflamesoffire"
+                            class="text-white hover:text-ember transition"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="https://www.instagram.com/flamesoffire.ministries/"
+                            class="text-white hover:text-ember transition"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white hover:text-ember transition"><i
+                                class="fab fa-youtube fa-lg"></i></a>
+                        <a href="https://www.tiktok.com/@fofministries"
+                            class="text-white hover:text-ember transition"><i class="fab fa-tiktok fa-lg"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div
+                class="mt-20 pt-8 border-t border-white/5 text-center text-white text-[10px] uppercase font-bold tracking-[0.2em] fade-in">
+                &copy; 2026 Flames of Fire Ministries. All rights reserved.</div>
+        </div>
+    </footer>
+
+
+
+    </main>
+    <script>
+        const form = document.getElementById('payfast-form');
+        const purposeSelect = document.getElementById('purpose-select');
+        const itemNameInput = document.getElementById('itemName');
+
+        // Sync purpose dropdown into PayFast's item_name hidden field
+        purposeSelect.addEventListener('change', () => {
+            if (purposeSelect.value) {
+                itemNameInput.value = purposeSelect.value;
+            }
+        });
+
+        // Add fading animation to header on load
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.animate-fade-in-up')?.classList.add('translate-y-0', 'opacity-100');
+        });
+    </script>
+</body>
+
+</html>

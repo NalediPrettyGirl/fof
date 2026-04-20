@@ -7,8 +7,7 @@
   <title>Give Now - Flames of Fire Ministries</title>
   <link rel="shortcut icon" href="Fof/logo.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
@@ -17,7 +16,8 @@
     }
 
     input::placeholder {
-      color: #4b5563;
+      color: #ffffff;
+      opacity: 0.5;
     }
 
     .form-input {
@@ -25,6 +25,7 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.3s ease;
       backdrop-filter: blur(5px);
+      color: white;
     }
 
     .form-input:focus {
@@ -39,8 +40,8 @@
   </style>
 </head>
 
-<body class="bg-fof-navy text-white font-sans overflow-x-hidden">
-  <!-- Navigation (Synced from index.html) -->
+<body class="bg-fof-navy text-white overflow-x-hidden">
+  <!-- Navigation -->
   <nav class="fixed w-full bg-[#1a2d4d] text-white z-50 border-b border-white/5 shadow-2xl">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <a class="navbar-brand" href="index.html">
@@ -53,7 +54,7 @@
 
         <!-- Community Dropdown -->
         <div class="nav-item-dropdown group">
-          <a href="index.html#community"
+          <a href=#community"
             class="hover:text-ember transition font-bold text-sm lg:text-base flex items-center py-2 tracking-wide">
             Community
             <svg class="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-300" fill="none"
@@ -101,27 +102,24 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="min-h-screen flex items-center justify-center relative py-32 px-4">
-    <!-- Background with high-end feel -->
+  <main class="min-h-screen flex items-center justify-center relative py-32 px-4 shadow-inner">
     <div class="absolute inset-0 z-0">
-      <img src="Fof/6.jpg" class="w-full h-full object-cover opacity-20 brightness-50">
-      <div class="absolute inset-0 bg-gradient-to-t from-[#1a2d4d] via-[#1a2d4d]/60 to-[#1a2d4d]"></div>
+      <div class="absolute inset-0 bg-[#1a2d4d]"></div>
     </div>
 
-    <div class="container max-w-6xl mx-auto relative z-10 text-center">
+    <div class="container max-w-7xl mx-auto relative z-10 text-center text-white">
       <!-- Header Section -->
-      <div class="mb-12 animate-fade-in-up">
-        <h1 class="text-5xl md:text-7xl font-serif text-white tracking-tight mb-6">GIVING</h1>
+      <div class="mb-12 fade-in">
+        <h1 class="text-5xl md:text-7xl text-white tracking-tight mb-6 uppercase">GIVING</h1>
       </div>
 
-      <!-- Giving Card (Narrower for focus) -->
-      <div class="max-w-2xl mx-auto">
+      <!-- Giving Card -->
+      <div class="max-w-3xl mx-auto fade-in-up">
         <div
           class="bg-[#1a2d4d]/80 p-8 md:p-12 rounded-[2.5rem] border border-white/10 shadow-2xl relative ember-glow backdrop-blur-sm premium-card">
-         <!-- PayFast Form -->
+          <!-- PayFast Form -->
           <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post" id="payfast-form"
             class="space-y-4">
-            <!-- Required PayFast Fields -->
             <input type="hidden" name="cmd" value="_paynow">
             <input type="hidden" name="receiver" value="23522210">
             <input type="hidden" name="item_name" value="General Offering" id="itemName">
@@ -130,7 +128,8 @@
 
             <!-- Amount Input -->
             <div class="relative">
-              <input required type="number" step="0.01" name="amount" id="PayFastAmount" placeholder="Enter amount (ZAR)"
+              <input required type="number" step="0.01" name="amount" id="PayFastAmount"
+                placeholder="Enter amount (ZAR)"
                 class="w-full form-input py-4 px-6 rounded-2xl text-lg text-white font-medium">
             </div>
 
@@ -146,118 +145,78 @@
                 <option value="Thanksgiving">Thanksgiving</option>
               </select>
               <div class="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none opacity-50">
-                <i class="fas fa-hand-holding-heart text-sm"></i>
+                <i class="fas fa-chevron-down text-white"></i>
               </div>
             </div>
 
             <!-- Submit Button -->
             <button type="submit"
-              class="w-full bg-ember hover:bg-ember-dark text-white font-extrabold py-5 rounded-2xl text-lg transition duration-300 transform hover:scale-[1.02] shadow-xl uppercase tracking-widest">
-              Give Now
+              class="w-full bg-ember border border-white/20 hover-ember-light text-white font-bold py-5 rounded-2xl text-lg transition duration-500 transform hover:scale-[1.02] shadow-xl uppercase tracking-[0.3em]">
+              Offer
             </button>
           </form>
 
-          <p class="mt-8 text-[10px] text-gray-500 font-bold uppercase tracking-widest flex items-center justify-center">
-            <i class="fas fa-lock mr-2 text-green-600"></i> Secure Payment Gateway
+          <p
+            class="mt-8 text-[10px] text-white font-bold uppercase tracking-widest flex items-center justify-center opacity-60">
+            <i class="fas fa-lock mr-2"></i> Secure Payment Gateway
           </p>
         </div>
       </div>
 
-      <!-- Specific Giving Purposes Section -->
-      <div class="mt-20">
-        <h3 class="text-xs font-bold mb-10 uppercase tracking-[0.5em] text-ember opacity-80">Specific Giving Purposes
-        </h3>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4" id="purpose-grid">
-          <div
-            class="purpose-tile bg-[#1a2d4d]/40 p-6 rounded-2xl border border-white/10 premium-card transition group cursor-pointer"
-            data-purpose="General Offering">
-            <i class="fas fa-hand-holding-heart text-2xl mb-4 text-gray-400 group-hover:text-ember transition"></i>
-            <h4 class="text-[10px] font-bold uppercase tracking-widest text-white">General Offering</h4>
-          </div>
-          <div
-            class="purpose-tile bg-[#1a2d4d]/40 p-6 rounded-2xl border border-white/10 premium-card transition group cursor-pointer"
-            data-purpose="Tithes">
-            <i class="fas fa-church text-2xl mb-4 text-gray-400 group-hover:text-ember transition"></i>
-            <h4 class="text-[10px] font-bold uppercase tracking-widest text-white">Tithes</h4>
-          </div>
-          <div
-            class="purpose-tile bg-[#1a2d4d]/40 p-6 rounded-2xl border border-white/10 premium-card transition group cursor-pointer"
-            data-purpose="Missions">
-            <i class="fas fa-globe-africa text-2xl mb-4 text-gray-400 group-hover:text-ember transition"></i>
-            <h4 class="text-[10px] font-bold uppercase tracking-widest text-white">Missions</h4>
-          </div>
-          <div
-            class="purpose-tile bg-[#1a2d4d]/40 p-6 rounded-2xl border border-white/10 premium-card transition group cursor-pointer"
-            data-purpose="Building Fund">
-            <i class="fas fa-tools text-2xl mb-4 text-gray-400 group-hover:text-ember transition"></i>
-            <h4 class="text-[10px] font-bold uppercase tracking-widest text-white">Building Fund</h4>
-          </div>
-          <div
-            class="purpose-tile bg-[#1a2d4d]/40 p-6 rounded-2xl border border-white/10 premium-card transition group cursor-pointer"
-            data-purpose="Thanksgiving">
-            <i class="fas fa-pray text-2xl mb-4 text-gray-400 group-hover:text-ember transition"></i>
-            <h4 class="text-[10px] font-bold uppercase tracking-widest text-white">Thanksgiving</h4>
-          </div>
+      <!-- Fundraising Section -->
+      <div class="mt-32 pt-24 pb-12 relative fade-in">
+        <div class="absolute inset-0 z-0 overflow-hidden rounded-[3rem]">
+          <img src="Fof/6.jpg" class="w-full h-full object-cover opacity-20 brightness-75">
+          <div class="absolute inset-0 bg-gradient-to-b from-[#1a2d4d] via-transparent to-[#1a2d4d]"></div>
         </div>
-        <p class="text-[9px] text-gray-600 mt-6 uppercase tracking-[0.2em]" id="selected-purpose-text">Currently
-          selecting: General Offering</p>
-        <!-- Fundraising Section -->
-        <!-- Fundraising Section -->
-        <div class="mt-32 border-t border-white/5 pt-24 pb-12">
+
+        <div class="relative z-10 text-white">
           <div class="text-center mb-16">
-            <h4 class="text-xl md:text-2xl font-light mb-4 uppercase tracking-[0.3em] font-serif text-ember">Make a Difference</h4>
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-12 uppercase tracking-[0.1em] text-white">Help Us
-              Build the Future</h2>
+            <h4 class="text-xl md:text-2xl mb-4 uppercase tracking-[0.3em] text-ember">Make a Difference</h4>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl mb-12 uppercase tracking-[0.1em] text-white">Help Us Build the
+              Future</h2>
 
             <div
               class="max-w-3xl mx-auto bg-white/5 p-8 md:p-10 rounded-2xl border border-white/5 shadow-2xl mb-12 backdrop-blur-sm">
-              <p class="text-lg italic text-gray-300 mb-4 leading-relaxed">"Unless the Lord builds the house, the
-                builders labor in vain."</p>
-              <p class="text-gray-500 font-bold tracking-widest uppercase text-xs">— Psalm 127:1</p>
+              <p class="text-lg italic text-white mb-4 leading-relaxed">"Unless the Lord builds the house, the builders
+                labor in vain."</p>
+              <p class="text-white font-bold tracking-widest uppercase text-xs">— Psalm 127:1</p>
             </div>
-
-            <p
-              class="text-base md:text-lg text-gray-300 font-medium max-w-4xl mx-auto mb-16 uppercase tracking-[0.15em] leading-relaxed">
-              We believe God has called us to build His house, a sanctuary for our children and future generations.
-              To fulfill this vision, we are raising funds and welcome your support.
-            </p>
 
             <!-- Building Initiative Gallery -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 px-4 md:px-0">
               <div
-                class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group">
+                class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group fade-in-up">
                 <img src="Fof/11.jpg"
                   class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
               </div>
               <div
-                class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group mt-8 md:mt-16">
+                class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group mt-8 md:mt-16 fade-in-up delay-100">
                 <img src="Fof/12.jpg"
                   class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
               </div>
               <div
-                class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group">
+                class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group fade-in-up delay-200">
                 <img src="Fof/15.jpg"
                   class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
               </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
-              <!-- Partnership Card -->
               <div
-                class="bg-white/10 p-12 rounded-xl border border-white/20 shadow-xl premium-card transition duration-300">
-                <h4 class="text-[11px] font-bold mb-6 uppercase tracking-[0.4em] text-white">Partnership</h4>
-                <p class="text-gray-200 text-sm font-medium leading-relaxed">Join our circle of covenant partners and
-                  contribute monthly to the growth of the ministry and the temple project.</p>
-                <i class="fas fa-handshake text-2xl mt-8 opacity-40"></i>
+                class="p-12 rounded-3xl border border-white/20 shadow-2xl premium-card transition duration-500 overflow-hidden relative fade-in-left">
+                <h4 class="text-xs font-bold mb-6 uppercase tracking-[0.5em] text-white">Partnership</h4>
+                <p class="text-white text-base font-medium leading-relaxed mb-8">Join our circle of covenant partners
+                  and contribute monthly to the growth of the ministry and the temple project.</p>
+                <i class="fas fa-handshake text-3xl opacity-20 hover:opacity-40 transition"></i>
               </div>
 
-              <!-- Merchandise Card -->
               <div
-                class="bg-white/10 p-12 rounded-xl border border-white/20 shadow-xl premium-card transition duration-300">
-                <h4 class="text-[11px] font-bold mb-6 uppercase tracking-[0.4em] text-white">Merchandise</h4>
-                <p class="text-gray-200 text-sm font-medium leading-relaxed">Support us by purchasing limited edition
-                  FOF helmets, T-shirts, and caps. All proceeds go directly to the building fund.</p>
-                <i class="fas fa-tshirt text-2xl mt-8 opacity-40"></i>
+                class="p-12 rounded-3xl border border-white/20 shadow-2xl premium-card transition duration-500 overflow-hidden relative fade-in-right">
+                <h4 class="text-xs font-bold mb-6 uppercase tracking-[0.5em] text-white">Merchandise</h4>
+                <p class="text-white text-base font-medium leading-relaxed mb-8">Support us by purchasing limited
+                  edition FOF helmets, T-shirts, and caps. All proceeds go directly to the building fund.</p>
+                <i class="fas fa-tshirt text-3xl opacity-20 hover:opacity-40 transition"></i>
               </div>
             </div>
 
@@ -268,56 +227,62 @@
           </div>
         </div>
       </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-black text-white py-24 border-t border-white/10 relative z-10">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
-        <div class="col-span-1 md:col-span-2">
-          <img src="Fof/logo.png" class="h-16 w-auto mb-8 mx-auto md:mx-0" alt="Logo">
-          <p class="text-gray-600 text-sm font-medium leading-relaxed max-w-xs mx-auto md:mx-0">Dedicated to
-            worship, community service, and spiritual excellence since 1999.</p>
-        </div>
-        <div class="col-span-1 md:col-span-1">
-          <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-gray-300">Visit Us</h4>
-          <div class="text-gray-600 text-sm font-medium space-y-4">
-            <div>
-              <p>797, Clove Drive</p>
-              <p>Zakariyya Park, ext 4</p>
-            </div>
-            <div>
-              <p>732, Ramapulane Street</p>
-              <p>Mofolo South, Soweto</p>
-            </div>
-            <div>
-              <p>660, Ramaphosa Settlement</p>
-              <p>Rustervaal</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-span-1 md:col-span-1">
-          <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-gray-300">Contact</h4>
-          <div class="text-gray-600 text-sm font-medium space-y-4">
-            <p>info@flamesoffire.co.za</p>
-            <p>(011) 859 1030</p>
-          </div>
-          <div class="flex space-x-6 mt-8 justify-center md:justify-start">
-            <a href="https://web.facebook.com/keflamesoffire" class="text-gray-600 hover:text-ember transition"><i
-                class="fab fa-facebook-f fa-lg"></i></a>
-            <a href="https://www.instagram.com/flamesoffire.ministries/"
-              class="text-gray-600 hover:text-ember transition"><i class="fab fa-instagram fa-lg"></i></a>
-            <a href="#" class="text-gray-600 hover:text-ember transition"><i class="fab fa-youtube fa-lg"></i></a>
-            <a href="https://www.tiktok.com/@fofministries" class="text-gray-600 hover:text-ember transition"><i
-                class="fab fa-tiktok fa-lg"></i></a>
-          </div>
-        </div>
-      </div>
-      <div
-        class="mt-20 pt-8 border-t border-white/5 text-center text-gray-800 text-[10px] uppercase font-bold tracking-[0.2em]">
-        &copy; 2026 Flames of Fire Ministries. All rights reserved.</div>
     </div>
-  </footer>
+  </main>
+    <!-- Footer -->
+    <footer class="bg-black text-white py-24 border-t border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+                <div class="col-span-1 md:col-span-2">
+                    <img src="Fof/logo.png" class="h-16 w-auto mb-8 mx-auto md:mx-0" alt="Logo">
+                    <p class="text-white text-sm font-medium leading-relaxed max-w-xs mx-auto md:mx-0">Dedicated to
+                        worship, community service, and spiritual excellence since 1999.</p>
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Visit Us</h4>
+                    <div class="text-white text-sm font-medium space-y-4">
+                        <div>
+                            <p>797, Clove Drive</p>
+                            <p>Zakariyya Park, ext 4</p>
+                        </div>
+                        <div>
+                            <p>732, Ramapulane Street</p>
+                            <p>Mofolo South, Soweto</p>
+                        </div>
+                        <div>
+                            <p>660, Ramaphosa Settlement</p>
+                            <p>Rustervaal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Contact</h4>
+                    <div class="text-white text-sm font-medium space-y-4">
+                        <p>info@flamesoffire.co.za</p>
+                        <p>(011) 859 1030</p>
+                    </div>
+                    <br>
+                   <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Follow Us</h4>
+                    <div class="flex space-x-6 mt-8 justify-center md:justify-start">
+                        <a href="https://web.facebook.com/keflamesoffire"
+                            class="text-white hover:text-ember transition"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="https://www.instagram.com/flamesoffire.ministries/"
+                            class="text-white hover:text-ember transition"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white hover:text-ember transition"><i
+                                class="fab fa-youtube fa-lg"></i></a>
+                        <a href="https://www.tiktok.com/@fofministries"
+                            class="text-white hover:text-ember transition"><i class="fab fa-tiktok fa-lg"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div
+                class="mt-20 pt-8 border-t border-white/5 text-center text-white text-[10px] uppercase font-bold tracking-[0.2em] fade-in">
+                &copy; 2026 Flames of Fire Ministries. All rights reserved.</div>
+        </div>
+    </footer>
+
 
   <script>
     const form = document.getElementById('payfast-form');
@@ -325,39 +290,27 @@
     const itemNameInput = document.getElementById('itemName');
     const mobileMenuButton = document.getElementById('mobile-menu-button');
 
-    // Navigation
     mobileMenuButton?.addEventListener('click', () => {
       const menu = document.getElementById('mobile-menu');
       if (menu) menu.classList.toggle('hidden');
     });
 
-    // Sync Item Name logic from Tiles
     const tiles = document.querySelectorAll('.purpose-tile');
     const selectionText = document.getElementById('selected-purpose-text');
 
     tiles.forEach(tile => {
       tile.addEventListener('click', () => {
-        // Remove active classes
         tiles.forEach(t => t.classList.remove('border-ember', 'bg-ember/10'));
-
-        // Add active state
         tile.classList.add('border-ember', 'bg-ember/10');
-
         const purpose = tile.getAttribute('data-purpose');
         itemNameInput.value = purpose;
         selectionText.innerText = `Currently selecting: ${purpose}`;
         selectionText.classList.add('text-ember');
-
-        // Scroll back to form slightly for focus
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
-
-    // Add fading animation to header on load
-    window.addEventListener('DOMContentLoaded', () => {
-      document.querySelector('.animate-fade-in-up')?.classList.add('translate-y-0', 'opacity-100');
-    });
   </script>
+  <script src="animations.js"></script>
 </body>
 
 </html>
