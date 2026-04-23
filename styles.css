@@ -189,12 +189,12 @@ h5 {
 }
 
 .hero-slide:nth-child(1) {
-    background-image: url('Fof/AB.png');
+    background-image: url('Fof/A2.png');
     animation-delay: 0s;
 }
 
 .hero-slide:nth-child(2) {
-    background-image: url('Fof/A2.png');
+    background-image: url('Fof/AB.png');
     animation-delay: 6s;
 }
 
