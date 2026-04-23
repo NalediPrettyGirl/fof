@@ -1,0 +1,103 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Give Now - Flames of Fire Ministries</title>
+  <link rel="shortcut icon" href="Fof/logo.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .ember-glow {
+      box-shadow: 0 0 20px rgba(226, 88, 34, 0.15);
+    }
+
+    input::placeholder {
+      color: #ffffff;
+      opacity: 0.5;
+    }
+
+    .form-input {
+      background-color: rgba(26, 45, 77, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+      color: white;
+    }
+
+    .form-input:focus {
+      border-color: #E25822;
+      outline: none;
+      box-shadow: 0 0 10px rgba(226, 88, 34, 0.2);
+    }
+
+    .bg-fof-navy {
+      background-color: #1a2d4d;
+    }
+  </style>
+</head>
+<main class="min-h-screen flex items-center justify-center relative py-32 px-4 shadow-inner">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-[#1a2d4d]"></div>
+    </div>
+
+    <div class="container max-w-7xl mx-auto relative z-10 text-center text-white">
+      <!-- Header Section -->
+      <div class="mb-12 fade-in">
+        <h1 class="text-5xl md:text-7xl text-white tracking-tight mb-6 uppercase">GIVING</h1>
+      </div>
+
+      <!-- Giving Card -->
+      <div class="max-w-3xl mx-auto fade-in-up">
+        <div
+          class="bg-[#1a2d4d]/80 p-8 md:p-12 rounded-[2.5rem] border border-white/10 shadow-2xl relative ember-glow backdrop-blur-sm premium-card">
+          <!-- PayFast Form -->
+          <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post" id="payfast-form"
+            class="space-y-4">
+            <input type="hidden" name="cmd" value="_paynow">
+            <input type="hidden" name="receiver" value="23522210">
+            <input type="hidden" name="item_name" value="General Offering" id="itemName">
+            <input type="hidden" name="return_url" value="https://flamesoffire.co.za/success">
+            <input type="hidden" name="cancel_url" value="https://flamesoffire.co.za/give">
+
+            <!-- Amount Input -->
+            <div class="relative">
+              <input required type="number" step="0.01" name="amount" id="PayFastAmount"
+                placeholder="Enter amount (ZAR)"
+                class="w-full form-input py-4 px-6 rounded-2xl text-lg text-white font-medium">
+            </div>
+
+            <!-- Purpose Selection -->
+            <div class="relative">
+              <select id="purpose-select" required
+                class="w-full form-input py-4 px-6 rounded-2xl text-white appearance-none cursor-pointer">
+                <option value="" disabled selected>Select Purpose</option>
+                <option value="Offering">General Offering</option>
+                <option value="Tithe">Tithe</option>
+                <option value="Missions">Missions</option>
+                <option value="Building Fund">Building Fund</option>
+                <option value="Thanksgiving">Thanksgiving</option>
+              </select>
+              <div class="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none opacity-50">
+                <i class="fas fa-chevron-down text-white"></i>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+              class="w-full bg-ember border border-white/20 hover-ember-light text-white font-bold py-5 rounded-2xl text-lg transition duration-500 transform hover:scale-[1.02] shadow-xl uppercase tracking-[0.3em]">
+              Offer
+            </button>
+          </form>
+
+          <p
+            class="mt-8 text-[10px] text-white font-bold uppercase tracking-widest flex items-center justify-center opacity-60">
+            <i class="fas fa-lock mr-2"></i> Secure Payment Gateway
+          </p>
+        </div>
+      </div>
+      </div>
+      </main>
