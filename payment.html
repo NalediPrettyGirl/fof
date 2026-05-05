@@ -7,12 +7,25 @@
   <title>Give Now - Flames of Fire Ministries</title>
   <link rel="shortcut icon" href="Fof/logo.png" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ember: '#FF8C00',
+            'ember-dark': '#E67E00',
+            'ember-light': '#FFA500',
+          }
+        }
+      }
+    }
+  </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     .ember-glow {
-      box-shadow: 0 0 20px rgba(226, 88, 34, 0.15);
+      box-shadow: 0 0 20px rgba(255, 102, 0, 0.15);
     }
 
     input::placeholder {
@@ -29,9 +42,9 @@
     }
 
     .form-input:focus {
-      border-color: #E25822;
+      border-color: #FF6600;
       outline: none;
-      box-shadow: 0 0 10px rgba(226, 88, 34, 0.2);
+      box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
     }
 
     .bg-fof-navy {
@@ -103,15 +116,8 @@
 
   <!-- Main Content -->
   <main class="min-h-screen flex items-center justify-center relative py-32 px-4 shadow-inner">
-    <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 bg-[#1a2d4d]"></div>
-    </div>
-
+    
     <div class="container max-w-7xl mx-auto relative z-10 text-center text-white">
-      <!-- Header Section -->
-      <div class="mb-12 fade-in">
-        <h1 class="text-5xl md:text-7xl text-white tracking-tight mb-6 uppercase">GIVING</h1>
-      </div>
       <!-- Fundraising Section -->
       <div class="mt-32 mt-5 pb-12 relative fade-in">
         <div class="absolute inset-0 z-0 overflow-hidden rounded-[3rem]">
@@ -121,55 +127,54 @@
 
         <div class="relative z-10 text-white">
           <div class="text-center mb-16">
-            <h4 class="text-xl md:text-2xl mb-4 uppercase tracking-[0.3em] text-ember">Make a Difference</h4>
-            <h2 class="text-3xl md:text-5xl lg:text-6xl mb-12 uppercase tracking-[0.1em] text-white">Help Us Build the
-              Future</h2>
+            <h2 class="text-2xl md:text-4xl lg:text-5xl mb-8 uppercase tracking-[0.1em] text-white">GIVING</h2>
+            <h2 class="text-2xl md:text-4xl lg:text-5xl mb-12 uppercase tracking-[0.1em] text-white">Make a Difference<br>Help Us Build the Future</h2>
 
             <div
-              class="max-w-3xl mx-auto bg-white/5 p-8 md:p-10 rounded-2xl border border-white/5 shadow-2xl mb-12 backdrop-blur-sm">
-              <p class="text-lg italic text-white mb-4 leading-relaxed">"Unless the Lord builds the house, the builders
-                labor in vain."</p>
-              <p class="text-white font-bold tracking-widest uppercase text-xs">— Psalm 127:1</p>
+              class="max-w-3xl mx-auto bg-white/5 p-6 md:p-10 rounded-2xl border border-white/5 shadow-2xl mb-12 backdrop-blur-sm">
+              <p class="text-base md:text-lg italic text-white mb-4 leading-relaxed">"Unless the Lord builds the house, the builders
+                labour in vain."</p>
+              <p class="text-white font-bold tracking-widest uppercase text-[10px] md:text-xs">— Psalm 127:1</p>
             </div>
 
             <!-- Building Initiative Gallery -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 px-4 md:px-0">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20 px-4 md:px-0">
               <div
                 class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group fade-in-up">
                 <img src="Fof/1775151313896.jpg"
                   class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
               </div>
               <div
-                class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group mt-8 md:mt-16 fade-in-up delay-100">
-                <img src="Fof/18.jpeg"
+                class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group mt-0 lg:mt-16 fade-in-up delay-100">
+                <img src="Fof/building/WhatsApp Image 2026-04-29 at 17.48.58 (2).jpeg"
                   class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
               </div>
               <div
                 class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl premium-card group fade-in-up delay-200">
-                <img src="Fof/1775151317452.jpg"
+                <img src="Fof/building/WhatsApp Image 2026-04-29 at 17.48.58 (1).jpeg"
                   class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
               </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
               <div
-                class="p-12 rounded-3xl border border-white/20 shadow-2xl premium-card transition duration-500 overflow-hidden relative fade-in-left">
-                <h4 class="text-xs font-bold mb-6 uppercase tracking-[0.5em] text-white">Partnership</h4>
-                <p class="text-white text-base font-medium leading-relaxed mb-8">Join our circle of covenant partners
+                class="p-8 md:p-12 rounded-3xl border border-white/20 shadow-2xl premium-card transition duration-500 overflow-hidden relative fade-in-left">
+                <h4 class="text-base md:text-lg font-bold mb-6 uppercase tracking-[0.5em] text-white">Partnership</h4>
+                <p class="text-white text-sm md:text-base font-medium leading-relaxed mb-8">Join our circle of covenant partners
                   and contribute monthly to the growth of the ministry and the temple project.</p>
                 <i class="fas fa-handshake text-3xl opacity-20 hover:opacity-40 transition"></i>
               </div>
 
               <div
-                class="p-12 rounded-3xl border border-white/20 shadow-2xl premium-card transition duration-500 overflow-hidden relative fade-in-right">
-                <h4 class="text-xs font-bold mb-6 uppercase tracking-[0.5em] text-white">Merchandise</h4>
-                <p class="text-white text-base font-medium leading-relaxed mb-8">Support us by purchasing limited
+                class="p-8 md:p-12 rounded-3xl border border-white/20 shadow-2xl premium-card transition duration-500 overflow-hidden relative fade-in-right">
+                <h4 class="text-base md:text-lg font-bold mb-6 uppercase tracking-[0.5em] text-white">Merchandise</h4>
+                <p class="text-white text-sm md:text-base font-medium leading-relaxed mb-8">Support us by purchasing limited
                   edition FOF helmets, T-shirts, and caps. All proceeds go directly to the building fund.</p>
                 <i class="fas fa-tshirt text-3xl opacity-20 hover:opacity-40 transition"></i>
               </div>
             </div>
 
-            <button onclick="window.location.href='pay.html'"
+            <button onclick="window.location.href='payment_individual (5).html'"
               class="bg-white/5 hover:bg-ember hover:border-ember border border-white/20 py-4 rounded-sm shadow-xl inline-block px-10 transition-all duration-500 group cursor-pointer uppercase font-bold tracking-[0.3em] text-white text-base hover:scale-105 active:scale-95">
               OFFER
             </button>
@@ -182,48 +187,48 @@
     <footer class="bg-black text-white py-24 border-t border-white/10">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
-                <div class="col-span-1 md:col-span-2">
+                <div class="col-span-1 md:col-span-1">
                     <img src="Fof/logo.png" class="h-16 w-auto mb-8 mx-auto md:mx-0" alt="Logo">
-                    <p class="text-white text-sm font-medium leading-relaxed max-w-xs mx-auto md:mx-0">Dedicated to
+                    <p class="text-white text-xs font-medium leading-relaxed max-w-xs mx-auto md:mx-0">Dedicated to
                         worship, community service, and spiritual excellence since 1999.</p>
                 </div>
                 <div class="col-span-1 md:col-span-1">
                     <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Visit Us</h4>
-                    <div class="text-white text-sm font-medium space-y-4">
+                    <div class="text-white text-[11px] font-medium space-y-4">
                         <div>
-                            <p>797, Clove Drive</p>
-                            <p>Zakariyya Park, ext 4</p>
+                            <p>797, Clove Drive, Zakariyya Park</p>
+                            <p>732, Ramapulane St, Soweto</p>
+                            <p>660, Ramaphosa, Rustervaal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Service Times</h4>
+                    <div class="text-white text-[11px] font-medium space-y-4">
+                        <div>
+                            <p class="font-bold text-ember">Sunday Worship</p>
+                            <p>09:00 AM — 12:00 PM</p>
                         </div>
                         <div>
-                            <p>732, Ramapulane Street</p>
-                            <p>Mofolo South, Soweto</p>
-                        </div>
-                        <div>
-                            <p>660, Ramaphosa Settlement</p>
-                            <p>Rustervaal</p>
+                            <p class="font-bold text-ember">Wednesday Prayer</p>
+                            <p>06:00 PM — 08:00 PM</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-span-1 md:col-span-1">
                     <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Contact</h4>
-                    <div class="text-white text-sm font-medium space-y-4">
+                    <div class="text-white text-[11px] font-medium space-y-2">
                         <p>info@flamesoffire.co.za</p>
                         <p>(011) 859 1030</p>
                     </div>
-                    <br>
-                   <div class="col-span-1 md:col-span-1">
-                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Follow Us</h4>
-                    <div class="flex space-x-6 mt-8 justify-center md:justify-start">
-                        <a href="https://web.facebook.com/keflamesoffire"
-                            class="text-white hover:text-ember transition"><i class="fab fa-facebook-f fa-lg"></i></a>
-                        <a href="https://www.instagram.com/flamesoffire.ministries/"
-                            class="text-white hover:text-ember transition"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white hover:text-ember transition"><i
-                                class="fab fa-youtube fa-lg"></i></a>
-                        <a href="https://www.tiktok.com/@fofministries"
-                            class="text-white hover:text-ember transition"><i class="fab fa-tiktok fa-lg"></i></a>
+                    <div class="mt-8">
+                        <h4 class="text-[10px] font-bold mb-4 uppercase tracking-widest text-white">Follow Us</h4>
+                        <div class="flex space-x-4 justify-center md:justify-start">
+                            <a href="https://web.facebook.com/keflamesoffire" class="text-white hover:text-ember transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/flamesoffire.ministries/" class="text-white hover:text-ember transition"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@fofministries" class="text-white hover:text-ember transition"><i class="fab fa-tiktok"></i></a>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
             <div

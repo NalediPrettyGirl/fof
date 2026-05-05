@@ -11,6 +11,19 @@
     <title>Social Responsibility - Flames of Fire</title>
     <link rel="shortcut icon" href="Fof/logo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ember: '#FF8C00',
+                        'ember-dark': '#E67E00',
+                        'ember-light': '#FFA500',
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap">
     <link rel="stylesheet" href="styles.css">
@@ -57,9 +70,9 @@
     <header class="h-[60vh] hero-gradient text-white" style="background-image: url('Fof/IMG-20260222-WA0054.jpg');">
         <div class="hero-overlay !bg-black/50"></div>
         <div class="hero-content container mx-auto px-4 text-center fade-in">
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-light mb-6 tracking-tight uppercase">Social
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight uppercase">Social
                 Responsibility</h1>
-            <p class="text-xl md:text-3xl font-light max-w-2xl mx-auto opacity-90 uppercase tracking-widest text-white">
+            <p class="text-base md:text-2xl font-light max-w-2xl mx-auto opacity-90 uppercase tracking-widest text-white">
                 Extending the hand of Christ to our community.</p>
             <div class="ember-bg h-1.5 w-32 mx-auto mt-10 shadow-[0_0_20px_rgba(226,88,34,0.4)]"></div>
         </div>
@@ -68,35 +81,40 @@
     <!-- Impact Areas -->
     <section class="py-24 bg-[#1a2d4d]">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-5xl font-light mb-16 text-center uppercase tracking-[0.2em] fade-in">OUR IMPACT
+            <h2 class="text-2xl md:text-4xl font-light mb-16 text-center uppercase tracking-[0.2em] fade-in">OUR IMPACT
                 AREAS</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="premium-card p-10 rounded-3xl border border-white/10 group fade-in-up">
-                    <div class="h-[300px] rounded-2xl overflow-hidden mb-8 shadow-2xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                <div class="premium-card p-6 rounded-3xl border border-white/10 group fade-in-up">
+                    <div class="h-[240px] rounded-2xl overflow-hidden mb-6 shadow-2xl">
                         <img src="Fof/IMG-20251220-WA0308.jpg" alt="Outreach 1"
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
                     </div>
-                    <h3 class="text-2xl font-light mb-4 uppercase tracking-wide">Food Security</h3>
-                    <p class="text-white text-base leading-relaxed font-light">Feeding families and individuals in need
-                        through our regular community kitchen and food parcel distributions.</p>
+                    <h3 class="text-xl font-light mb-4 uppercase tracking-wide">Food Security</h3>
+                    <p class="text-white text-sm leading-relaxed font-light">Feeding families in need through our regular community kitchen and food parcel distributions.</p>
                 </div>
-                <div class="premium-card p-10 rounded-3xl border border-white/10 group fade-in-up delay-100">
-                    <div class="h-[300px] rounded-2xl overflow-hidden mb-8 shadow-2xl">
+                <div class="premium-card p-6 rounded-3xl border border-white/10 group fade-in-up delay-100">
+                    <div class="h-[240px] rounded-2xl overflow-hidden mb-6 shadow-2xl">
                         <img src="Fof/IMG-20251220-WA0130.jpg" alt="Outreach 2"
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
                     </div>
-                    <h3 class="text-2xl font-light mb-4 uppercase tracking-wide">Youth development</h3>
-                    <p class="text-white text-base leading-relaxed font-light">Empowering the next generation with
-                        literacy programs, skills workshops, and mentorship initiatives.</p>
+                    <h3 class="text-xl font-light mb-4 uppercase tracking-wide">Youth development</h3>
+                    <p class="text-white text-sm leading-relaxed font-light">Empowering the next generation with literacy programs, skills workshops, and mentorship.</p>
                 </div>
-                <div class="premium-card p-10 rounded-3xl border border-white/10 group fade-in-up delay-200">
-                    <div class="h-[300px] rounded-2xl overflow-hidden mb-8 shadow-2xl">
+                <div class="premium-card p-6 rounded-3xl border border-white/10 group fade-in-up delay-200">
+                    <div class="h-[240px] rounded-2xl overflow-hidden mb-6 shadow-2xl">
                         <img src="Fof/IMG-20251220-WA0305.jpg" alt="Outreach 3"
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
                     </div>
-                    <h3 class="text-2xl font-light mb-4 uppercase tracking-wide">Community Support</h3>
-                    <p class="text-white text-base leading-relaxed font-light">Providing essential support to local
-                        shelters and orphanages through clothing drives and financial aid.</p>
+                    <h3 class="text-xl font-light mb-4 uppercase tracking-wide">Community Support</h3>
+                    <p class="text-white text-sm leading-relaxed font-light">Providing support to local shelters and orphanages through clothing drives and aid.</p>
+                </div>
+                <div class="premium-card p-6 rounded-3xl border border-white/10 group fade-in-up delay-300">
+                    <div class="h-[240px] rounded-2xl overflow-hidden mb-6 shadow-2xl">
+                        <img src="Fof/our community/WhatsApp Image 2026-04-29 at 17.48.55.jpeg" alt="Outreach 4"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <h3 class="text-xl font-light mb-4 uppercase tracking-wide">Education & Empowerment</h3>
+                    <p class="text-white text-sm leading-relaxed font-light">Supporting preschools and aftercare programs while providing vocational training for self-reliance.</p>
                 </div>
             </div>
         </div>
@@ -107,48 +125,48 @@
     <footer class="bg-black text-white py-24 border-t border-white/10">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
-                <div class="col-span-1 md:col-span-2">
+                <div class="col-span-1 md:col-span-1">
                     <img src="Fof/logo.png" class="h-16 w-auto mb-8 mx-auto md:mx-0" alt="Logo">
-                    <p class="text-white text-sm font-medium leading-relaxed max-w-xs mx-auto md:mx-0">Dedicated to
+                    <p class="text-white text-xs font-medium leading-relaxed max-w-xs mx-auto md:mx-0">Dedicated to
                         worship, community service, and spiritual excellence since 1999.</p>
                 </div>
                 <div class="col-span-1 md:col-span-1">
                     <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Visit Us</h4>
-                    <div class="text-white text-sm font-medium space-y-4">
+                    <div class="text-white text-[11px] font-medium space-y-4">
                         <div>
-                            <p>797, Clove Drive</p>
-                            <p>Zakariyya Park, ext 4</p>
+                            <p>797, Clove Drive, Zakariyya Park</p>
+                            <p>732, Ramapulane St, Soweto</p>
+                            <p>660, Ramaphosa, Rustervaal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Service Times</h4>
+                    <div class="text-white text-[11px] font-medium space-y-4">
+                        <div>
+                            <p class="font-bold text-ember">Sunday Worship</p>
+                            <p>09:00 AM — 12:00 PM</p>
                         </div>
                         <div>
-                            <p>732, Ramapulane Street</p>
-                            <p>Mofolo South, Soweto</p>
-                        </div>
-                        <div>
-                            <p>660, Ramaphosa Settlement</p>
-                            <p>Rustervaal</p>
+                            <p class="font-bold text-ember">Wednesday Prayer</p>
+                            <p>06:00 PM — 08:00 PM</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-span-1 md:col-span-1">
                     <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Contact</h4>
-                    <div class="text-white text-sm font-medium space-y-4">
+                    <div class="text-white text-[11px] font-medium space-y-2">
                         <p>info@flamesoffire.co.za</p>
                         <p>(011) 859 1030</p>
                     </div>
-                    <br>
-                   <div class="col-span-1 md:col-span-1">
-                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Follow Us</h4>
-                    <div class="flex space-x-6 mt-8 justify-center md:justify-start">
-                        <a href="https://web.facebook.com/keflamesoffire"
-                            class="text-white hover:text-ember transition"><i class="fab fa-facebook-f fa-lg"></i></a>
-                        <a href="https://www.instagram.com/flamesoffire.ministries/"
-                            class="text-white hover:text-ember transition"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white hover:text-ember transition"><i
-                                class="fab fa-youtube fa-lg"></i></a>
-                        <a href="https://www.tiktok.com/@fofministries"
-                            class="text-white hover:text-ember transition"><i class="fab fa-tiktok fa-lg"></i></a>
+                    <div class="mt-8">
+                        <h4 class="text-[10px] font-bold mb-4 uppercase tracking-widest text-white">Follow Us</h4>
+                        <div class="flex space-x-4 justify-center md:justify-start">
+                            <a href="https://web.facebook.com/keflamesoffire" class="text-white hover:text-ember transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/flamesoffire.ministries/" class="text-white hover:text-ember transition"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@fofministries" class="text-white hover:text-ember transition"><i class="fab fa-tiktok"></i></a>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
             <div

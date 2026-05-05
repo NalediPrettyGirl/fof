@@ -1,9 +1,9 @@
 /* Design System */
 :root {
-    --ember: #E25822;
-    --ember-dark: #c45124;
-    --ember-light: #c45124;
-    /* Vibrant light orange */
+    --ember: #E67E00;
+    --ember-dark: #E67E00;
+    --ember-light: #FFA500;
+    /* Vibrant premium orange */
     --charcoal: #111;
     --cream: #f4f4f4;
 }
@@ -313,7 +313,7 @@ h5 {
     display: inline-flex;
     align-items: center;
     padding: 0 1rem;
-    color: white;
+    color: var(--ember);
     font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.15em;
