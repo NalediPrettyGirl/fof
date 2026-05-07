@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body class="bg-[#1a2d4d] text-white overflow-x-hidden">
+<body class="bg-slate-800 text-white overflow-x-hidden">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-[#1a2d4d] text-white z-50 border-b border-white/5 shadow-2xl">
+    <nav class="fixed w-full bg-slate-800 text-white z-50 border-b border-white/5 shadow-2xl">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a class="navbar-brand" href="index.html">
                 <img src="Fof/logo.png" class="h-12 w-auto" alt="Logo"></a>
@@ -51,7 +51,7 @@
                             </path>
                         </svg>
                     </a>
-                    <div class="dropdown-menu !bg-[#1a2d4d] shadow-2xl border-white/10">
+                    <div class="dropdown-menu !bg-slate-800 shadow-2xl border-white/10">
                         <a href="sr.html" class="dropdown-item">Social Responsibility</a>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden md:hidden bg-[#1a2d4d] fixed inset-x-0 top-[72px] border-b border-white/5 animate-slide-down max-h-[calc(100vh-72px)] overflow-y-auto">
+            class="hidden md:hidden bg-slate-800 fixed inset-x-0 top-[72px] border-b border-white/5 animate-slide-down max-h-[calc(100vh-72px)] overflow-y-auto">
             <div class="container mx-auto px-4 py-8 flex flex-col space-y-4 text-center">
                 <a href="index.html"
                     class="text-xl font-bold hover:text-ember transition py-2 border-b border-white/5">Home</a>
@@ -81,7 +81,7 @@
                 <div class="py-2 border-b border-white/5">
                     <span class="text-xl font-bold ember block mb-4">Our Community</span>
                     <div class="flex flex-col space-y-4">
-                         <a href="sr.html" class="dropdown-item">Social Responsibility</a>
+                        <a href="sr.html" class="dropdown-item">Social Responsibility</a>
                     </div>
                 </div>
 
@@ -91,8 +91,9 @@
     </nav>
 
     <!-- Header -->
-    <header class="h-[60vh] hero-gradient text-white" style="background-image: url('Fof/our community/WhatsApp Image 2026-04-29 at 17.48.55 (2).jpeg');">
-        <div class="hero-overlay !bg-black/50"></div>
+    <header class="h-[60vh] hero-gradient text-white"
+        style="background-image: url('Fof/our community/Screenshot from 2026-05-07 18-05-36.png');">
+        <div class="hero-overlay !bg-slate-800/50"></div>
         <div class="hero-content container mx-auto px-4 text-center relative z-10 fade-in">
             <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight uppercase">UPCOMING EVENTS</h1>
             <div class="ember-bg h-1 w-32 mx-auto mb-8 shadow-[0_0_20px_rgba(226,88,34,0.4)]"></div>
@@ -102,57 +103,61 @@
     </header>
 
     <!-- Events Section -->
-    <section class="py-24 bg-[#1a2d4d]">
+    <section class="py-24 bg-slate-800">
         <div class="container mx-auto px-4">
             <div id="events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in-up">
                 <!-- Event 1: Mother's Day -->
-                <div class="ticket-card mb-8 group premium-card shadow-2xl">
+                <div class="ticket-card mb-8 group shadow-2xl">
                     <div class="ticket-image relative overflow-hidden aspect-video md:aspect-auto md:h-full">
                         <img src="Fof/our community/WhatsApp Image 2026-04-29 at 17.48.53.jpeg"
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                             alt="Mother's Day">
                         <div
-                            class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-full text-xs uppercase tracking-[0.2em] font-bold border border-white/10 ember">
+                            class="absolute top-4 right-4 bg-slate-800/40 backdrop-blur-md px-4 py-2 rounded-full text-xs uppercase tracking-[0.2em] font-bold border border-white/10 ember">
                             10 MAY 2026</div>
                     </div>
-                    <div class="p-8 flex-grow">
-                        <div class="flex items-center gap-2 mb-3">
+                    <div class="p-8 flex-grow text-center flex flex-col justify-center">
+                        <div class="flex justify-center items-center gap-2 mb-4">
                             <span
-                                class="px-2 py-0.5 bg-ember/10 text-white text-[9px] uppercase font-black tracking-tighter rounded-full border border-ember/20">Featured</span>
+                                class="px-3 py-1 bg-ember/10 text-white text-[10px] uppercase font-black tracking-widest rounded-full border border-ember/20">Featured</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wider group-hover:text-ember transition">
+                        <h3 class="text-2xl font-bold mb-6 uppercase tracking-widest group-hover:text-ember transition">
                             Mother's Day Celebration</h3>
-                        <p class="text-white text-sm mb-6 leading-relaxed">A special service dedicated to honoring the amazing mothers in our community. Join us for a time of appreciation and blessing.</p>
-                        <div class="mt-auto pt-6 border-t border-white/5 flex flex-wrap gap-4">
-                            <div class="flex items-center text-[10px] text-white font-bold uppercase tracking-widest">
-                                <i class="fas fa-map-marker-alt mr-2 text-ember"></i> Main Sanctuary
+                        <p class="text-white text-sm mb-8 leading-relaxed opacity-80">A special service dedicated to
+                            honoring the amazing mothers in our community Join us for a time of appreciation and
+                            blessing</p>
+                        <div class="mt-auto pt-8 border-t border-white/5 flex justify-center flex-wrap gap-8">
+                            <div class="flex items-center text-[11px] text-white font-bold uppercase tracking-widest">
+                                <i class="fas fa-map-marker-alt mr-3 text-ember"></i> Main Sanctuary
                             </div>
-                            <div class="flex items-center text-[10px] text-white font-bold uppercase tracking-widest">
-                                <i class="far fa-clock mr-2 text-ember"></i> 09:00
+                            <div class="flex items-center text-[11px] text-white font-bold uppercase tracking-widest">
+                                <i class="far fa-clock mr-3 text-ember"></i> 09:00
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Event 2: Baby Dedication -->
-                <div class="ticket-card mb-8 group premium-card shadow-2xl">
+                <div class="ticket-card mb-8 group shadow-2xl">
                     <div class="ticket-image relative overflow-hidden aspect-video md:aspect-auto md:h-full">
                         <img src="Fof/10.jpg"
                             class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                             alt="Baby Dedication">
                         <div
-                            class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-full text-xs uppercase tracking-[0.2em] font-bold border border-white/10 ember">
+                            class="absolute top-4 right-4 bg-slate-800/40 backdrop-blur-md px-4 py-2 rounded-full text-xs uppercase tracking-[0.2em] font-bold border border-white/10 ember">
                             24 MAY 2026</div>
                     </div>
-                    <div class="p-8 flex-grow">
-                        <div class="flex items-center gap-2 mb-3">
+                    <div class="p-8 flex-grow flex flex-col justify-center items-center text-center">
+                        <div class="flex justify-center items-center gap-2 mb-3">
                             <span
                                 class="px-2 py-0.5 bg-ember/10 text-white text-[9px] uppercase font-black tracking-tighter rounded-full border border-ember/20">Special</span>
                         </div>
                         <h3 class="text-xl font-bold mb-4 uppercase tracking-wider group-hover:text-ember transition">
                             Baby Dedication Service</h3>
-                        <p class="text-white text-sm mb-6 leading-relaxed">Celebrating new life and committing our children to the Lord. A beautiful moment for families and the entire church family.</p>
-                        <div class="mt-auto pt-6 border-t border-white/5 flex flex-wrap gap-4">
+                        <p class="text-white text-sm mb-6 leading-relaxed opacity-80">Celebrating new life and
+                            committing our
+                            children to the Lord A beautiful moment for families and the entire church family</p>
+                        <div class="mt-auto pt-6 border-t border-white/5 flex justify-center flex-wrap gap-4">
                             <div class="flex items-center text-[10px] text-white font-bold uppercase tracking-widest">
                                 <i class="fas fa-map-marker-alt mr-2 text-ember"></i> Main Sanctuary
                             </div>
@@ -163,34 +168,7 @@
                     </div>
                 </div>
 
-                <!-- Event 3: Church Workers Camp -->
-                <div class="ticket-card mb-8 group premium-card shadow-2xl">
-                    <div class="ticket-image relative overflow-hidden aspect-video md:aspect-auto md:h-full">
-                        <img src="Fof/4.jpg"
-                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-                            alt="Church Workers Camp">
-                        <div
-                            class="absolute top-4 right-4 bg-black/40 backdrop-blur-md px-4 py-2 rounded-full text-xs uppercase tracking-[0.2em] font-bold border border-white/10 ember">
-                            12 JUNE 2026</div>
-                    </div>
-                    <div class="p-8 flex-grow">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span
-                                class="px-2 py-0.5 bg-cyan-500/10 text-white text-[9px] uppercase font-black tracking-tighter rounded-full border border-cyan-500/20">Workers</span>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wider group-hover:text-ember transition">
-                            Church Workers Camp</h3>
-                        <p class="text-white text-sm mb-6 leading-relaxed">A time of refreshment, training, and strategic planning for all church workers. Let's strengthen our hands for the work ahead.</p>
-                        <div class="mt-auto pt-6 border-t border-white/5 flex flex-wrap gap-4">
-                            <div class="flex items-center text-[10px] text-white font-bold uppercase tracking-widest">
-                                <i class="fas fa-map-marker-alt mr-2 text-ember"></i> Retreat Center
-                            </div>
-                            <div class="flex items-center text-[10px] text-white font-bold uppercase tracking-widest">
-                                <i class="far fa-clock mr-2 text-ember"></i> ALL DAY
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
             <div id="no-events" class="hidden text-center py-24">
@@ -200,97 +178,138 @@
     </section>
 
     <!-- Gallery Preview (Pictures and all) -->
-    <section class="py-24 bg-[#1a2d4d] border-y border-white/5">
+    <section class="py-24 bg-slate-800 border-y border-white/5">
         <div class="container mx-auto px-4 text-center fade-in">
             <h2 class="text-2xl md:text-4xl font-light mb-16 uppercase tracking-[0.2em]">EVENT HIGHLIGHTS</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
-                <div class="aspect-square rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative group">
-                    <img src="Fof/IMG-20260111-WA0012.jpg" class="w-full h-full object-cover transition duration-700" alt="Event 1">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-md p-4 border-t border-white/10">
-                        <p class="text-white text-xs font-bold uppercase tracking-wider">Sunday Service</p>
-                        <p class="text-white/70 text-[9px] uppercase mt-1">A heart of gratitude and praise.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
+                <div class="aspect-square rounded-2xl overflow-hidden border border-ember shadow-2xl relative group">
+                    <img src="Fof/IMG-20260111-WA0012.jpg"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Event 1">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-slate-800/60 backdrop-blur-md p-6 border-t border-white/10">
+                        <p class="text-white text-sm font-bold uppercase tracking-wider">Sunday Service</p>
+                        <p class="text-white/70 text-[10px] uppercase mt-2">A heart of gratitude and praise</p>
                     </div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative group">
-                    <img src="Fof/IMG-20260329-WA0036.jpg" class="w-full h-full object-cover transition duration-700" alt="Event 2">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-md p-4 border-t border-white/10">
-                        <p class="text-white text-xs font-bold uppercase tracking-wider">Prophetic Night</p>
-                        <p class="text-white/70 text-[9px] uppercase mt-1">Deep spiritual encounters and revelation.</p>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-ember shadow-2xl relative group">
+                    <img src="Fof/our community/WhatsApp Image 2026-04-29 at 17.48.56.jpeg"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Event 3">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-slate-800/60 backdrop-blur-md p-6 border-t border-white/10">
+                        <p class="text-white text-sm font-bold uppercase tracking-wider">Community Outreach</p>
+                        <p class="text-white/70 text-[10px] uppercase mt-2">Spreading the word beyond our walls</p>
                     </div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative group">
-                    <img src="Fof/our community/WhatsApp Image 2026-04-29 at 17.48.56.jpeg" class="w-full h-full object-cover transition duration-700" alt="Event 3">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-md p-4 border-t border-white/10">
-                        <p class="text-white text-xs font-bold uppercase tracking-wider">Community Outreach</p>
-                        <p class="text-white/70 text-[9px] uppercase mt-1">Spreading the Word beyond our walls.</p>
+                <div class="aspect-square rounded-2xl overflow-hidden border border-ember shadow-2xl relative group">
+                    <img src="Fof/10.jpg"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Event 4">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-slate-800/60 backdrop-blur-md p-6 border-t border-white/10">
+                        <p class="text-white text-sm font-bold uppercase tracking-wider">Youth Ministry</p>
+                        <p class="text-white/70 text-[10px] uppercase mt-2">Empowering the next generation of leaders
+                        </p>
                     </div>
                 </div>
-                <div class="aspect-square rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative group">
-                    <img src="Fof/10.jpg" class="w-full h-full object-cover transition duration-700" alt="Event 4">
-                    <div class="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-md p-4 border-t border-white/10">
-                        <p class="text-white text-xs font-bold uppercase tracking-wider">Youth Ministry</p>
-                        <p class="text-white/70 text-[9px] uppercase mt-1">Empowering the next generation of leaders.</p>
-                    </div>
-                </div>
-                <!-- Additional Images -->
-                
+            </div>
+            <!-- Additional Images -->
+
 
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-24 border-t border-white/10">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
-                <div class="col-span-1 md:col-span-1">
-                    <img src="Fof/logo.png" class="h-16 w-auto mb-8 mx-auto md:mx-0" alt="Logo">
-                    <p class="text-white text-xs font-medium leading-relaxed max-w-xs mx-auto md:mx-0">Dedicated to
-                        worship, community service, and spiritual excellence since 1999.</p>
+
+    <div
+        class="ticker-container z-20 relative -mt-6 flex flex-col md:flex-row items-stretch md:items-center bg-slate-800 border-y border-white/10">
+
+
+        <!-- Scroller -->
+        <div class="flex-grow overflow-hidden relative bg-slate-800 pt-6 mb-6">
+
+            <div class="ticker-wrapper" style="animation-duration: 50s;">
+
+                <!-- ITEMS -->
+                <div class="ticker-item text-sm md:text-base font-bold tracking-widest uppercase">
+                    <i class="fas fa-church text-cyan-400 mr-3"></i>
+                    Sunday Worship • 09:00 AM
                 </div>
-                <div class="col-span-1 md:col-span-1">
-                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Visit Us</h4>
-                    <div class="text-white text-[11px] font-medium space-y-4">
-                        <div>
-                            <p>797, Clove Drive, Zakariyya Park</p>
-                            <p>732, Ramapulane St, Soweto</p>
-                            <p>660, Ramaphosa, Rustervaal</p>
-                        </div>
-                    </div>
+
+                <div class="ticker-item text-sm md:text-base font-bold tracking-widest uppercase">
+                    <i class="fas fa-praying-hands text-yellow-400 mr-3"></i>
+                    Wednesday Prayer • 06:00 PM
                 </div>
-                <div class="col-span-1 md:col-span-1">
-                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Service Times</h4>
-                    <div class="text-white text-[11px] font-medium space-y-4">
-                        <div>
-                            <p class="font-bold text-ember">Sunday Worship</p>
-                            <p>09:00 AM — 12:00 PM</p>
-                        </div>
-                        <div>
-                            <p class="font-bold text-ember">Wednesday Prayer</p>
-                            <p>06:00 PM — 08:00 PM</p>
-                        </div>
-                    </div>
+
+                <div class="ticker-item text-sm md:text-base font-bold tracking-widest uppercase">
+                    <i class="fas fa-users text-pink-400 mr-3"></i>
+                    Building Faith • Family • Community
                 </div>
-                <div class="col-span-1 md:col-span-1">
-                    <h4 class="text-xs font-bold mb-6 uppercase tracking-widest text-white">Contact</h4>
-                    <div class="text-white text-[11px] font-medium space-y-2">
-                        <p>info@flamesoffire.co.za</p>
-                        <p>(011) 859 1030</p>
-                    </div>
-                    <div class="mt-8">
-                        <h4 class="text-[10px] font-bold mb-4 uppercase tracking-widest text-white">Follow Us</h4>
-                        <div class="flex space-x-4 justify-center md:justify-start">
-                            <a href="https://web.facebook.com/keflamesoffire" class="text-white hover:text-ember transition"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/flamesoffire.ministries/" class="text-white hover:text-ember transition"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.tiktok.com/@fofministries" class="text-white hover:text-ember transition"><i class="fab fa-tiktok"></i></a>
-                        </div>
-                    </div>
+
+                <div class="ticker-item text-sm md:text-base font-bold tracking-widest uppercase">
+                    <i class="fas fa-map-marker-alt text-red-400 mr-3"></i>
+                    797 Clove Drive, Zakariyya Park • 732 Ramapulane Street, Mofolo South • 660 Ramaphosa, Rustervaal
                 </div>
+                <!-- SOCIAL MEDIA -->
+                <div class="ticker-item text-sm md:text-base font-bold tracking-widest uppercase">
+                    <a href="https://web.facebook.com/keflamesoffire"
+                        class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-facebook-f text-blue-500 mr-3"></i>
+                        Facebook • Flames Of Fire Ministries
+                    </a>
+                </div>
+
+                <div class="ticker-item text-sm md:text-base font-bold tracking-widest uppercase">
+                    <a href="https://www.instagram.com/flamesoffire.ministries/"
+                        class="hover:text-pink-400 transition duration-300">
+                        <i class="fab fa-instagram text-pink-500 mr-3"></i>
+                        Instagram • @flamesoffire.ministries
+                    </a>
+                </div>
+
+                <div class="ticker-item text-sm md:text-base font-bold tracking-widest uppercase">
+                    <a href="https://www.tiktok.com/@fofministries" class="hover:text-white transition duration-300">
+                        <i class="fab fa-tiktok text-white mr-3"></i>
+                        TikTok • @fofministries
+                    </a>
+                </div>
+
+                <div class="ticker-item text-sm md:text-base font-bold tracking-widest uppercase">
+                    <i class="fas fa-phone-alt text-cyan-300 mr-3"></i>
+                    Contact • (011) 859 1030
+                </div>
+
+                <!-- DUPLICATE FOR SMOOTH LOOP -->
+
+                <div class="ticker-item text-sm md:text-base font-bold tracking-widest uppercase">
+                    <i class="fas fa-church text-cyan-400 mr-3"></i>
+                    Sunday Worship • 09:00 AM
+                </div>
+
+                <div class="ticker-item text-sm md:text-base font-bold tracking-widest uppercase">
+                    <a href="https://web.facebook.com/keflamesoffire"
+                        class="hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-facebook-f text-blue-500 mr-3"></i>
+                        Facebook • Flames Of Fire Ministries
+                    </a>
+                </div>
+
+                <div class="ticker-item text-sm md:text-base font-bold tracking-widest uppercase">
+                    <a href="https://www.instagram.com/flamesoffire.ministries/"
+                        class="hover:text-pink-400 transition duration-300">
+                        <i class="fab fa-instagram text-pink-500 mr-3"></i>
+                        Instagram • @flamesoffire.ministries
+                    </a>
+                </div>
+
+                <div class="ticker-item text-sm md:text-base font-bold tracking-widest uppercase">
+                    <a href="https://www.tiktok.com/@fofministries" class="hover:text-white transition duration-300">
+                        <i class="fab fa-tiktok text-white mr-3"></i>
+                        TikTok • @fofministries
+                    </a>
+                </div>
+
             </div>
-            <div
-                class="mt-20 pt-8 border-t border-white/5 text-center text-white text-[10px] uppercase font-bold tracking-[0.2em] fade-in">
-                &copy; 2026 Flames of Fire Ministries. All rights reserved.</div>
         </div>
-    </footer>
+    </div>
 
     <script>
         const API_BASE = "https://fof-website-upgrade-api.onrender.com/";
@@ -311,12 +330,12 @@
                     <div class="ticket-card mb-8 group">
                         <div class="ticket-image relative overflow-hidden aspect-video md:aspect-auto md:h-full">
                             <img src="${event.image || 'Fof/9.jpg'}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="${event.title}">
-                            <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold border border-white/10">${new Date(event.date).toLocaleDateString()}</div>
+                            <div class="absolute top-4 right-4 bg-slate-800/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold border border-white/10">${new Date(event.date).toLocaleDateString()}</div>
                         </div>
-                        <div class="p-8 flex-grow">
+                        <div class="p-8 flex-grow flex flex-col justify-center items-center text-center">
                             <h3 class="text-xl font-bold mb-4 uppercase tracking-wider">${event.title}</h3>
-                            <p class="text-white text-sm mb-6 leading-relaxed">${event.description}</p>
-                            <div class="mt-auto pt-6 border-t border-white/5 flex flex-wrap gap-4">
+                            <p class="text-white text-sm mb-6 leading-relaxed opacity-80">${event.description}</p>
+                            <div class="mt-auto pt-6 border-t border-white/5 flex justify-center flex-wrap gap-4">
                                 <div class="flex items-center text-[10px] text-white font-bold uppercase tracking-widest">
                                     <i class="fas fa-map-marker-alt mr-2 ember"></i> ${event.venue || 'Various Venues'}
                                 </div>
