@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 /* Design System */
 :root {
-    --ember: #D97706;
-    --ember-dark: #B45309;
-    --ember-light: #F59E0B;
-    /* Rich Golden Amber */
+    --ember: #E67E00;
+    --ember-dark: #E67E00;
+    --ember-light: #FFA500;
+    /* Vibrant premium orange */
     --charcoal: #111;
     --cream: #f4f4f4;
 }
@@ -28,8 +26,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .ember {
@@ -81,7 +78,7 @@ h5 {
 .premium-card h4,
 .ticket-card h3,
 .ticket-card h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
