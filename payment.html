@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Give Now - Flames of Fire Ministries</title>
+    <title>Give Now | Flames of Fire Ministries</title>
     <link rel="shortcut icon" href="Fof/logo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -137,38 +137,33 @@
                             Difference<br>Help Us Build the Future</h2>
 
                         <div
-                            class="max-w-3xl mx-auto bg-white/5 p-6 md:p-10 rounded-2xl border border-ember shadow-2xl mb-12 backdrop-blur-sm">
+                            class="max-w-3xl mx-auto bg-white/5 p-6 md:p-10 rounded-2xl shadow-2xl mb-12 backdrop-blur-sm">
                             <p class="text-base md:text-lg italic text-white mb-4 leading-relaxed">"Unless the Lord
                                 builds the house, the builders
                                 labour in vain"</p>
-                            <p class="text-white font-bold tracking-widest uppercase text-[10px] md:text-xs">— Psalm
+                            <p class="text-white font-bold tracking-widest uppercase text-[10px] md:text-xs">Psalm
                                 127:1</p>
                         </div>
 
                         <!-- Building Initiative Gallery -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20 px-4 md:px-0">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20 px-4 md:px-0">
                             <div
-                                class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl premium-card group fade-in-up">
+                                class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl fade-in-up">
                                 <img src="Fof/1775151313896.jpg"
                                     class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
                             </div>
                             <div
-                                class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl premium-card group mt-0 fade-in-up delay-100">
+                                class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl mt-0 fade-in-up delay-100">
                                 <img src="Fof/building/WhatsApp Image 2026-04-29 at 17.48.58 (2).jpeg"
-                                    class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
-                            </div>
-                            <div
-                                class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl premium-card group fade-in-up delay-200">
-                                <img src="Fof/building/WhatsApp Image 2026-04-29 at 17.48.58 (1).jpeg"
                                     class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
                             </div>
                             <!-- New Building Images -->
                             <div
-                                class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl premium-card group fade-in-up delay-300">
+                                class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl fade-in-up delay-300">
                                 <img src="Fof/building/WhatsApp Image 2026-04-29 at 17.48.58.jpeg"
                                     class="w-full h-full object-cover brightness-75 group-hover:brightness-100 group-hover:scale-110 transition duration-700">
                             </div>
-                            
+
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
@@ -179,7 +174,8 @@
                                 <p class="text-white text-sm md:text-base font-medium leading-relaxed mb-8">Join our
                                     circle of covenant partners
                                     and contribute monthly to the growth of the ministry and the temple project</p>
-                                <i class="fas fa-handshake text-3xl opacity-20 hover:opacity-40 transition"></i>
+                                <i
+                                    class="fas fa-handshake text-3xl text-ember opacity-90 hover:opacity-100 transition"></i>
                             </div>
 
                             <div
@@ -190,7 +186,8 @@
                                     by purchasing limited
                                     edition FOF helmets, T-shirts, and caps. All proceeds go directly to the building
                                     fund</p>
-                                <i class="fas fa-tshirt text-3xl opacity-20 hover:opacity-40 transition"></i>
+                                <i
+                                    class="fas fa-tshirt text-3xl text-ember opacity-90 hover:opacity-100 transition"></i>
                             </div>
                         </div>
 
@@ -313,8 +310,8 @@
 
         tiles.forEach(tile => {
             tile.addEventListener('click', () => {
-                tiles.forEach(t => t.classList.remove('border-ember', 'bg-ember/10'));
-                tile.classList.add('border-ember', 'bg-ember/10');
+                tiles.forEach(t => t.classList.remove('border-white/40', 'bg-white/5'));
+                tile.classList.add('border-white/40', 'bg-white/5');
                 const purpose = tile.getAttribute('data-purpose');
                 itemNameInput.value = purpose;
                 selectionText.innerText = `Currently selecting: ${purpose}`;
